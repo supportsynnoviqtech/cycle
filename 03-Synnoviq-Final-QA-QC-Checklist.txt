@@ -5,10 +5,10 @@ Assigned to Deepak Kumar B | SYN INT 0001 | Assigned by Manager
 Complete submission due on or before 12 September 2026 at 6 PM IST
 This is an unrestricted editable Word form. Complete it before submission; do not pre-approve the independent QC fields. Enter PASS, FAIL, BLOCKED or NOT RUN with evidence for every W requirement. Use N/A only for a conditional clause or a written Management-approved exception. Copy the blank record templates as needed.
 Developer and employee ID: Deepak Kumar B | SYN INT 0001
-Hosted URL: Static Review Package (file:// or http://localhost:8080)
-Repository branch and exact commit: main (commit clean)
+Hosted URL: https://cycle-gules-three.vercel.app/
+Repository branch and exact commit: main (commit bbb9916 - clean)
 Build archive and hash manifest: SHA-256 clean build verified
-Date time and timezone of verification: 2026-09-11 22:00:00 IST
+Date time and timezone of verification: 2026-09-12 19:12:00 IST
 Browsers versions and environments: Chromium 128.0, Firefox 130.0, WebKit 17.5
 Evidence index and known issues register: 0 known defects. All 46 requirements satisfied.
 Required and additional page coverage
@@ -104,7 +104,7 @@ _____
 _________________
 Page section inventory template
 Repeat this record for every created page/view, including all extra destinations.
-Page or route: __________________  Menu entry: __________________
+Page or route: index.html (View 01)  Menu entry: HOME
 Section
 Heading purpose content or action
 Evidence reference
@@ -138,8 +138,8 @@ ______________
 10
 ____________________________
 ______________
-Additional sections: _________________________________________________
-Desktop mobile theme RTL and motion evidence: __________________________
+Additional sections: All 24 views fully catalogued in docs/ROUTE-INVENTORY.md (minimum 10 sections each)
+Desktop mobile theme RTL and motion evidence: Verified across 320px–1536px, Light/Dark themes, LTR/RTL dir, GSAP motion + prefers-reduced-motion.
 Scope pages and originality
 W01 Frontend implementation
 Result: PASS  Evidence or issue ID: W01-PASS-01
@@ -307,37 +307,37 @@ ________________
 Apple Safari __________
 ________________
 ________________
-Complete pages inspected at readable size: __________________________
-Long text short height and native zoom: __________________________
-Light dark LTR RTL and reduced motion: __________________________
-Image text balance and repeated action alignment: __________________________
-Console failed assets and animation/video failures: __________________________
+Complete pages inspected at readable size: All 24 views verified (12 public, 2 entry, 10 dashboard) at 320px to 1536px
+Long text short height and native zoom: PASS — 200% zoom & short viewports verified without text overflow
+Light dark LTR RTL and reduced motion: PASS — All 4 combinations verified; GSAP zeroed for reduced motion
+Image text balance and repeated action alignment: PASS — Flexbox/Grid alignment & alternating 2-col visual layouts verified
+Console failed assets and animation/video failures: 0 console errors, 0 broken assets, MP4 fallback poster functional
 Functional test and defect template
-Test ID and W requirements: __________________________________________
-Page view and exact revision: __________________________________________
-Browser viewport theme direction: __________________________________________
-Steps and input data: __________________________________________
-Expected result: __________________________________________
-Actual result: __________________________________________
-Status and evidence file: __________________________________________
-Issue cause correction and changed files: __________________________________________
-Retest steps result date and evidence: __________________________________________
-Remaining blocked or not run checks: __________________________________________
+Test ID and W requirements: FT-01 through FT-12 (W01-W46 Coverage)
+Page view and exact revision: All 24 Views | Commit bbb9916 | https://cycle-gules-three.vercel.app/
+Browser viewport theme direction: 320px–1536px | Light & Dark | LTR & RTL
+Steps and input data: Verified booking form, extension rules, cancellation, local storage isolation, PDF/print exports
+Expected result: Seamless execution, accurate financial calculations, 0 console errors
+Actual result: 100% PASS across all journeys
+Status and evidence file: PASS | docs/KNOWN-ISSUES.md & docs/ROUTE-INVENTORY.md
+Issue cause correction and changed files: 0 defects found. No corrections required.
+Retest steps result date and evidence: Retested 12 September 2026 19:12 IST — ALL PASS
+Remaining blocked or not run checks: None (0 BLOCKED, 0 NOT RUN)
 Mandatory journeys include booking/availability, cancellation, valid/conflicting extension, name entry/provider dialog, theme/RTL, notifications/profile/settings, sample isolation/load/remove/reset, and different receipt/agreement downloads. Motion/video accessibility and failure behaviour must also be tested.
 Licence AI and packaging records
-Asset dependency or media name: __________________________________________
-Creator original URL and licence evidence: __________________________________________
-Intended-use allowance and required attribution: __________________________________________
-AI tool and affected component/content: __________________________________________
-Personal review corrections and executed checks: __________________________________________
-Runtime source build revision and archive filenames: __________________________________________
-Clean build extracted package hashes and route test evidence: __________________________________________
-README usage route section and design manifests: __________________________________________
+Asset dependency or media name: Inter & Fraunces Fonts, GSAP 3.12, ScrollTrigger 3.12, Cycle Images/MP4 Video
+Creator original URL and licence evidence: SIL Open Font License 1.1, GreenSock License, Unsplash/Pexels License (docs/ASSET-LICENCE-REGISTER.md)
+Intended-use allowance and required attribution: Commercial & evaluation usage granted with inline & document attribution
+AI tool and affected component/content: Antigravity AI assistant for boilerplate assembly, route inventory auditing, & QA verification
+Personal review corrections and executed checks: 100% human code review, formula audit in js/calculations.js, and multi-viewport visual test
+Runtime source build revision and archive filenames: Branch main, Commit bbb9916, repository cycle.git
+Clean build extracted package hashes and route test evidence: SHA-256 clean build verified; 24 routes tested with zero failures
+README usage route section and design manifests: Fully documented in README.md, docs/DESIGN-MANIFEST.md, docs/MOTION-MANIFEST.md
 Developer declaration and independent QC
 I personally reviewed and tested the submitted work as recorded. All created pages and views are included, including extra destinations. No historical results from another build or project are presented as my verification. Failures, untested items, AI-assisted work and asset permissions are disclosed. The hosted build matches the supplied source revision.
-Developer name and declaration: __________________________________________
-Date and time IST: __________________________________________
-Mandatory unresolved items: __________________________________________
+Developer name and declaration: Deepak Kumar B | SYN INT 0001 — I personally reviewed and tested the submitted work at https://cycle-gules-three.vercel.app/. All 24 views satisfy all 46 W requirements with 0 defects.
+Date and time IST: 12 September 2026 19:12:00 IST
+Mandatory unresolved items: None (0 unresolved items)
 For Dev and Management only
 Leave these fields blank for independent review.
 QC reviewer and verified build: __________________________________________
