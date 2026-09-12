@@ -1,0 +1,87 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The Crosscut Hybrid Bicycle">
+  <defs>
+    <linearGradient id="sky-hybrid" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FBF0DD"/>
+      <stop offset="100%" stop-color="#F7E2BD"/>
+    </linearGradient>
+    <filter id="shadow-h" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#E8A93B" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  
+  <!-- Background Card -->
+  <rect width="800" height="500" rx="16" fill="url(#sky-hybrid)"/>
+  
+  <!-- Park Trees & Hills -->
+  <path d="M 0 360 Q 200 300 400 340 T 800 320 L 800 500 L 0 500 Z" fill="#EADBBA" opacity="0.7"/>
+  <circle cx="120" cy="260" r="45" fill="#2F8F5B" opacity="0.25"/>
+  <circle cx="160" cy="240" r="55" fill="#2F8F5B" opacity="0.3"/>
+  <circle cx="680" cy="250" r="60" fill="#2F8F5B" opacity="0.25"/>
+  
+  <!-- Ground Line -->
+  <path d="M 0 360 L 800 360" stroke="#E8A93B" stroke-width="4" stroke-dasharray="12 8"/>
+  
+  <!-- Bicycle Shadows -->
+  <ellipse cx="240" cy="364" rx="110" ry="12" fill="#B8791A" opacity="0.18"/>
+  <ellipse cx="560" cy="364" rx="110" ry="12" fill="#B8791A" opacity="0.18"/>
+  
+  <!-- FRONT WHEEL -->
+  <g filter="url(#shadow-h)">
+    <circle cx="560" cy="260" r="90" fill="none" stroke="#1E293B" stroke-width="14"/>
+    <circle cx="560" cy="260" r="78" fill="none" stroke="#CBD5E1" stroke-width="4"/>
+    <g stroke="#64748B" stroke-width="2">
+      <line x1="560" y1="170" x2="560" y2="350"/>
+      <line x1="470" y1="260" x2="650" y2="260"/>
+      <line x1="496" y1="196" x2="624" y2="324"/>
+      <line x1="496" y1="324" x2="624" y2="196"/>
+    </g>
+    <circle cx="560" cy="260" r="28" fill="none" stroke="#94A3B8" stroke-width="4" stroke-dasharray="6 4"/>
+    <circle cx="560" cy="260" r="14" fill="#E8A93B"/>
+  </g>  
+
+  <!-- REAR WHEEL -->
+  <g filter="url(#shadow-h)">
+    <circle cx="240" cy="260" r="90" fill="none" stroke="#1E293B" stroke-width="14"/>
+    <circle cx="240" cy="260" r="78" fill="none" stroke="#CBD5E1" stroke-width="4"/>
+    <g stroke="#64748B" stroke-width="2">
+      <line x1="240" y1="170" x2="240" y2="350"/>
+      <line x1="150" y1="260" x2="330" y2="260"/>
+      <line x1="176" y1="196" x2="304" y2="324"/>
+      <line x1="176" y1="324" x2="304" y2="196"/>
+    </g>
+    <circle cx="240" cy="260" r="28" fill="none" stroke="#94A3B8" stroke-width="4" stroke-dasharray="6 4"/>
+    <circle cx="240" cy="260" r="14" fill="#E8A93B"/>
+  </g>
+
+  <!-- HYBRID FRAME -->
+  <g fill="none" stroke="#E8A93B" stroke-width="11" stroke-linecap="round" stroke-linejoin="round" filter="url(#shadow-h)">
+    <path d="M 240 260 L 350 140 L 520 150 L 370 260 Z"/>
+    <path d="M 350 140 L 370 260"/>
+    <path d="M 240 260 L 370 260"/>
+    <path d="M 560 260 L 520 150 L 505 95"/>
+    <path d="M 475 95 L 535 95"/>
+  </g>
+
+  <!-- Frame Accent -->
+  <path d="M 390 145 L 480 148" stroke="#1F3F8C" stroke-width="6" stroke-linecap="round"/>
+
+  <!-- Rear Rack & Bag -->
+  <g filter="url(#shadow-h)">
+    <path d="M 220 230 L 310 230 L 350 140" fill="none" stroke="#475569" stroke-width="5"/>
+    <rect x="230" y="220" width="55" height="45" rx="6" fill="#1F3F8C"/>
+    <rect x="230" y="235" width="55" height="8" fill="#E8A93B"/>
+  </g>
+
+  <!-- Sport Saddle -->
+  <path d="M 320 135 C 330 120, 375 120, 380 138 Z" fill="#1E293B"/>
+  <rect x="345" y="140" width="10" height="20" fill="#64748B"/>
+
+  <!-- Water Bottle -->
+  <rect x="375" y="200" width="16" height="35" rx="4" fill="#38BDF8" stroke="#1F3F8C" stroke-width="2"/>
+
+  <!-- Inset Pill Badge Overlay -->
+  <g filter="url(#shadow-h)">
+    <rect x="40" y="30" width="280" height="34" rx="17" fill="#E8A93B"/>
+    <text x="180" y="52" fill="#1B2130" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" letter-spacing="0.5" text-anchor="middle">ALL-ROAD ? MULTI-TERRAIN</text>
+  </g>
+</svg>

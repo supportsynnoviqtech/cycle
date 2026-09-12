@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rental History &ndash; Dashboard &mdash; PerfectBike</title>
+<meta name="description" content="Rental History &ndash; PerfectBike Dashboard.">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/layout.css">
+<script src="js/storage.js"></script>
+<script src="js/theme.js"></script>
+</head>
+<body class="dash-body">
+<div class="dash-shell">
+  <div id="dash-sidebar-mount"></div>
+  <main class="dash-main" id="main">
+
+    <header class="dash-header">
+      <div>
+        <button type="button" class="icon-control dash-mobile-toggle js-dash-mobile-open" aria-label="Open sidebar menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+        <div>
+          <h1 style="font-size:1.5rem;margin:0;">Rental History</h1>
+          <p class="text-muted" style="margin-top:2px;font-size:0.85rem;">View past, active, upcoming, and cancelled rentals.</p>
+        </div>
+      </div>
+      <div class="actions">
+        <a class="btn btn-primary btn-sm" href="dashboard-book.html">Book New Ride</a>
+      </div>
+    </header>
+
+    <div class="dash-content">
+
+      <section class="section-tight" aria-labelledby="hist-filter-h">
+        <div class="section-intro" style="text-align:start;margin-bottom:16px;">
+          <p class="eyebrow">Filters</p>
+          <h2 id="hist-filter-h">Filter by status</h2>
+        </div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;">
+          <button type="button" class="btn btn-secondary btn-sm js-hist-filter is-active" data-status="all">All</button>
+          <button type="button" class="btn btn-ghost btn-sm js-hist-filter" data-status="active">Active</button>
+          <button type="button" class="btn btn-ghost btn-sm js-hist-filter" data-status="upcoming">Upcoming</button>
+          <button type="button" class="btn btn-ghost btn-sm js-hist-filter" data-status="completed">Completed</button>
+          <button type="button" class="btn btn-ghost btn-sm js-hist-filter" data-status="cancelled">Cancelled</button>
+        </div>
+      </section>
+
+      <section class="section-tight" aria-labelledby="hist-table-h">
+        <h2 class="sr-only" id="hist-table-h">Rental records</h2>
+        <div class="table-wrapper">
+          <div class="history-cards" id="hist-cards" style="display:flex;flex-direction:column;gap:16px;">
+
+            <div class="card" data-status="active" style="padding:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;">
+              <div>
+                <div style="display:flex;gap:10px;align-items:center;margin-bottom:6px;">
+                  <span class="badge badge-success">Active Now</span>
+                  <span style="font-size:0.8rem;color:var(--color-text-muted);">Ref: #PB-1001</span>
+                </div>
+                <h3 style="font-size:1.1rem;margin:0 0 4px 0;">The Crosscut (Hybrid Bicycle)</h3>
+                <p class="text-muted" style="font-size:0.875rem;margin:0;">Riverside Dock Hub &bull; 2026-09-11 to 2026-09-13 (2 Days)</p>
+              </div>
+              <div style="text-align:end;display:flex;flex-direction:column;gap:8px;align-items:flex-end;">
+                <div style="font-size:1.25rem;font-weight:700;color:var(--color-primary);">$127.00</div>
+                <a class="btn btn-secondary btn-sm" href="dashboard-documents.html">View Receipt</a>
+              </div>
+            </div>
+
+            <div class="card" data-status="upcoming" style="padding:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;">
+              <div>
+                <div style="display:flex;gap:10px;align-items:center;margin-bottom:6px;">
+                  <span class="badge badge-warning">Upcoming</span>
+                  <span style="font-size:0.8rem;color:var(--color-text-muted);">Ref: #PB-1002</span>
+                </div>
+                <h3 style="font-size:1.1rem;margin:0 0 4px 0;">The Wayfarer (City Bicycle)</h3>
+                <p class="text-muted" style="font-size:0.875rem;margin:0;">Central Square Hub &bull; 2026-09-14 to 2026-09-17 (3 Days)</p>
+              </div>
+              <div style="text-align:end;display:flex;flex-direction:column;gap:8px;align-items:flex-end;">
+                <div style="font-size:1.25rem;font-weight:700;color:var(--color-primary);">$129.00</div>
+                <div style="display:flex;gap:8px;">
+                  <a class="btn btn-secondary btn-sm" href="dashboard-documents.html">View Estimate</a>
+                  <button type="button" class="btn btn-ghost btn-sm js-hist-cancel">Cancel</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="card" data-status="upcoming" style="padding:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;">
+              <div>
+                <div style="display:flex;gap:10px;align-items:center;margin-bottom:6px;">
+                  <span class="badge badge-warning">Upcoming</span>
+                  <span style="font-size:0.8rem;color:var(--color-text-muted);">Ref: #PB-1003</span>
+                </div>
+                <h3 style="font-size:1.1rem;margin:0 0 4px 0;">The Ascent (Electric Bicycle)</h3>
+                <p class="text-muted" style="font-size:0.875rem;margin:0;">Harbor Terrace Hub &bull; 2026-09-17 to 2026-09-18 (1 Day)</p>
+              </div>
+              <div style="text-align:end;display:flex;flex-direction:column;gap:8px;align-items:flex-end;">
+                <div style="font-size:1.25rem;font-weight:700;color:var(--color-primary);">$113.00</div>
+                <div style="display:flex;gap:8px;">
+                  <a class="btn btn-secondary btn-sm" href="dashboard-documents.html">View Estimate</a>
+                  <button type="button" class="btn btn-ghost btn-sm js-hist-cancel">Cancel</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="card" data-status="completed" style="padding:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;">
+              <div>
+                <div style="display:flex;gap:10px;align-items:center;margin-bottom:6px;">
+                  <span class="badge badge-primary">Completed</span>
+                  <span style="font-size:0.8rem;color:var(--color-text-muted);">Ref: #PB-1004</span>
+                </div>
+                <h3 style="font-size:1.1rem;margin:0 0 4px 0;">The Wayfarer (City Bicycle)</h3>
+                <p class="text-muted" style="font-size:0.875rem;margin:0;">Central Square Hub &bull; 2026-09-01 to 2026-09-03 (2 Days)</p>
+              </div>
+              <div style="text-align:end;display:flex;flex-direction:column;gap:8px;align-items:flex-end;">
+                <div style="font-size:1.25rem;font-weight:700;color:var(--color-primary);">$111.00</div>
+                <a class="btn btn-secondary btn-sm" href="dashboard-documents.html">View Receipt</a>
+              </div>
+            </div>
+
+            <div class="card" data-status="completed" style="padding:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;">
+              <div>
+                <div style="display:flex;gap:10px;align-items:center;margin-bottom:6px;">
+                  <span class="badge badge-primary">Completed</span>
+                  <span style="font-size:0.8rem;color:var(--color-text-muted);">Ref: #PB-1005</span>
+                </div>
+                <h3 style="font-size:1.1rem;margin:0 0 4px 0;">The Crosscut (Hybrid Bicycle)</h3>
+                <p class="text-muted" style="font-size:0.875rem;margin:0;">Riverside Dock Hub &bull; 2026-08-22 to 2026-08-25 (3 Days)</p>
+              </div>
+              <div style="text-align:end;display:flex;flex-direction:column;gap:8px;align-items:flex-end;">
+                <div style="font-size:1.25rem;font-weight:700;color:var(--color-primary);">$153.00</div>
+                <a class="btn btn-secondary btn-sm" href="dashboard-documents.html">View Receipt</a>
+              </div>
+            </div>
+
+          </div>
+          <p class="text-muted" id="hist-empty" style="display:none;text-align:center;padding:24px 0;">No rentals match this filter.</p>
+        </div>
+      </section>
+
+      <section class="section-tight" aria-labelledby="hist-cancel-rule">
+        <div class="section-intro" style="text-align:start;margin-bottom:16px;">
+          <p class="eyebrow">Cancellation Rule</p>
+          <h2 id="hist-cancel-rule">Specific upcoming interval cancellation</h2>
+        </div>
+        <div class="card"><p>Cancelling an upcoming booking marks only that specific interval as cancelled, without affecting any other record.</p></div>
+      </section>
+
+      <section class="section-tight" aria-labelledby="hist-diff-h">
+        <div class="section-intro" style="text-align:start;margin-bottom:16px;">
+          <p class="eyebrow">Document Reference Check</p>
+          <h2 id="hist-diff-h">Unique record references</h2>
+        </div>
+        <div class="card"><p>Each completed record generates documents with a distinct reference ID and calculated total amount.</p></div>
+      </section>
+
+      <section class="section-tight" aria-labelledby="hist-isolation">
+        <div class="section-intro" style="text-align:start;margin-bottom:16px;">
+          <p class="eyebrow">Data Model</p>
+          <h2 id="hist-isolation">Sample &amp; personal record isolation</h2>
+        </div>
+        <div class="card"><p>Sample rentals (SMP-1001 to SMP-1005) are stored separately from personal rider plans saved to local storage.</p></div>
+      </section>
+
+      <section class="section-tight" aria-labelledby="hist-calc">
+        <div class="section-intro" style="text-align:start;margin-bottom:16px;">
+          <p class="eyebrow">Calculation Engine</p>
+          <h2 id="hist-calc">Consistent financial totals</h2>
+        </div>
+        <div class="card"><p>Totals are derived via the shared <code>PerfectBikeCalc.calculateRentalTotal</code> helper, so the same rate always produces the same total everywhere.</p></div>
+      </section>
+
+      <section class="section-tight" aria-labelledby="hist-export-h">
+        <div class="section-intro" style="text-align:start;margin-bottom:16px;">
+          <p class="eyebrow">History Export</p>
+          <h2 id="hist-export-h">Rental record audit &amp; export options</h2>
+        </div>
+        <div class="card"><p class="text-muted">Your past and upcoming booking history can be reviewed, filtered, or downloaded as printable HTML documents at any time from the Documents page.</p></div>
+      </section>
+
+      <section class="section-tight" aria-labelledby="hist-demo-notice">
+        <div class="section-intro" style="text-align:start;margin-bottom:16px;">
+          <p class="eyebrow">Notice</p>
+          <h2 id="hist-demo-notice">Demonstration log</h2>
+        </div>
+        <div class="card"><p>History displays illustrative assessment data &ndash; no real reservations or charges are attached to any record.</p></div>
+      </section>
+
+      <section class="section-tight" aria-labelledby="hist-foot-card">
+        <h2 class="sr-only" id="hist-foot-card">Footer note</h2>
+        <div class="card" style="text-align:center;"><p class="text-muted">PerfectBike Dashboard &ndash; History Log</p></div>
+      </section>
+
+    </div>
+  </main>
+</div>
+<script src="js/data.js"></script>
+<script src="js/calculations.js"></script>
+<script src="js/dashboard.js"></script>
+<script src="assets/gsap/gsap.min.js"></script>
+<script src="assets/gsap/ScrollTrigger.min.js"></script>
+<script src="js/motion.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  PerfectBikeDashboard.mountSidebar("history");
+
+  const filterBtns = document.querySelectorAll(".js-hist-filter");
+  const cards = document.querySelectorAll("#hist-cards .card");
+  const emptyEl = document.getElementById("hist-empty");
+
+  function applyFilter(status) {
+    let visible = 0;
+    cards.forEach((card) => {
+      const show = status === "all" || card.dataset.status === status;
+      card.style.display = show ? "" : "none";
+      if (show) visible += 1;
+    });
+    emptyEl.style.display = visible === 0 ? "block" : "none";
+  }
+
+  filterBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      filterBtns.forEach((b) => {
+        b.classList.remove("is-active", "btn-secondary");
+        b.classList.add("btn-ghost");
+      });
+      btn.classList.remove("btn-ghost");
+      btn.classList.add("is-active", "btn-secondary");
+      applyFilter(btn.dataset.status);
+    });
+  });
+
+  document.querySelectorAll(".js-hist-cancel").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const card = btn.closest(".card");
+      card.dataset.status = "cancelled";
+      card.querySelector(".badge").className = "badge badge-danger";
+      card.querySelector(".badge").textContent = "Cancelled";
+      btn.remove();
+      const activeFilterBtn = document.querySelector(".js-hist-filter.is-active");
+      if (activeFilterBtn && activeFilterBtn.dataset.status !== "all") applyFilter(activeFilterBtn.dataset.status);
+    });
+  });
+});
+</script>
+</body>
+</html>

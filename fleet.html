@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fleet &ndash; Bicycle Catalogue &mdash; PerfectBike</title>
+<meta name="description" content="Fleet &ndash; Bicycle Catalogue &mdash; PerfectBike urban bicycle rental and guided tours demonstration.">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/layout.css">
+<script src="js/storage.js"></script>
+<script src="js/theme.js"></script>
+</head>
+<body>
+<div id="site-header"></div>
+<main id="main"><section class="section" aria-labelledby="fl-hero"><div class="container section-intro" data-animate="fade-up"><p class="eyebrow">Bicycle Catalogue</p><h2 id="fl-hero">Our fleet of city, hybrid, and electric bicycles</h2><p>Every rental includes a helmet, heavy-duty lock, front and rear lights, and free fitting at pickup.</p></div></section><section class="section section-alt" aria-labelledby="city-h"><div class="container split"><div data-animate="fade-right"><img src="assets/images/bike-city.svg" alt="The Wayfarer City Bicycle" loading="lazy"></div><div class="split-copy" data-animate="fade-left"><span class="badge badge-primary">City Category</span><h2>The Wayfarer</h2><p>Light, upright, made for weaving through traffic and errands alike.</p><p><strong>Tariff: $18.00 / day</strong> &ndash; Refundable Deposit: .00</p><a class="btn btn-primary" href="bike-city.html">View City Bike Details</a></div></div></section><section class="section" aria-labelledby="hyb-h"><div class="container split"><div class="split-copy" data-animate="fade-right"><span class="badge badge-primary">Hybrid Category</span><h2>The Crosscut</h2><p>A do-anything build for longer rides across mixed terrain and paved river paths.</p><p><strong>Tariff: $18.00 / day</strong> &ndash; Refundable Deposit: .00</p><a class="btn btn-primary" href="bike-hybrid.html">View Hybrid Bike Details</a></div><div data-animate="clip-reveal"><img src="assets/images/bike-hybrid.svg" alt="The Crosscut Hybrid Bicycle" loading="lazy"></div></div></section><section class="section section-alt" aria-labelledby="elec-h"><div class="container split"><div data-animate="fade-right"><img src="assets/images/bike-electric.svg" alt="The Ascent Electric Bicycle" loading="lazy"></div><div class="split-copy" data-animate="fade-left"><span class="badge badge-primary">Electric Category</span><h2>The Ascent</h2><p>Pedal-assist power for hills, distance, and warm afternoon breezes.</p><p><strong>Tariff: $18.00 / day</strong> &ndash; Refundable Deposit: .00</p><a class="btn btn-primary" href="bike-electric.html">View Electric Bike Details</a></div></div></section><section class="section" aria-labelledby="matrix-h"><div class="container"><div class="section-intro" data-animate="scale-in"><p class="eyebrow">Specs at a glance</p><h2 id="matrix-h">Fleet comparison matrix</h2></div><div class="table-wrapper"><div class="card-grid" style="grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:24px;align-items:stretch;">
+  <div class="card" style="display:flex;flex-direction:column;justify-content:space-between;padding:24px;background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-lg);box-shadow:var(--shadow-sm);">
+    <div>
+      <span class="badge badge-primary" style="margin-bottom:12px;display:inline-block;">City</span>
+      <h3 style="font-size:1.25rem;margin-bottom:8px;">The Wayfarer</h3>
+      <p style="font-size:1.75rem;font-weight:700;color:var(--color-primary);margin-bottom:4px;">$18.00 <span style="font-size:0.9rem;font-weight:400;color:var(--color-text-muted);">/ day</span></p>
+      <p class="text-muted" style="font-size:0.875rem;margin-bottom:16px;">+$75.00 refundable deposit</p>
+      <ul style="list-style:none;padding:0;margin:0 0 20px 0;display:flex;flex-direction:column;gap:8px;font-size:0.9rem;">
+        <li style="display:flex;align-items:center;gap:8px;"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="var(--color-success)" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> <strong>Terrain:</strong> Urban &amp; Flat streets</li>
+        <li style="display:flex;align-items:center;gap:8px;"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="var(--color-success)" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> <strong>Distance:</strong> 1 &ndash; 10 km daily</li>
+        <li style="display:flex;align-items:center;gap:8px;"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="var(--color-success)" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> <strong>Frame:</strong> Upright, step-through, front basket</li>
+        <li style="display:flex;align-items:center;gap:8px;"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="var(--color-success)" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> <strong>Includes:</strong> Helmet, lock, lights &amp; fitting</li>
+      </ul>
+    </div>
+    <a class="btn btn-secondary btn-block" href="bike-city.html">View Details</a>
+  </div>
+
+  <div class="card" style="display:flex;flex-direction:column;justify-content:space-between;padding:24px;background:var(--color-surface);border:2px solid var(--color-secondary);border-radius:var(--radius-lg);box-shadow:var(--shadow-md);position:relative;">
+    <span class="badge badge-warning" style="position:absolute;top:16px;right:16px;font-size:0.75rem;padding:4px 10px;z-index:5;">Most Popular</span>
+    <div>
+      <span class="badge badge-warning" style="margin-bottom:12px;display:inline-block;">Hybrid</span>
+      <h3 style="font-size:1.25rem;margin-bottom:8px;">The Crosscut</h3>
+      <p style="font-size:1.75rem;font-weight:700;color:var(--color-primary);margin-bottom:4px;">$26.00 <span style="font-size:0.9rem;font-weight:400;color:var(--color-text-muted);">/ day</span></p>
+      <p class="text-muted" style="font-size:0.875rem;margin-bottom:16px;">+$75.00 refundable deposit</p>
+      <ul style="list-style:none;padding:0;margin:0 0 20px 0;display:flex;flex-direction:column;gap:8px;font-size:0.9rem;">
+        <li style="display:flex;align-items:center;gap:8px;"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="var(--color-success)" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> <strong>Terrain:</strong> Mixed &amp; Trail paths</li>
+        <li style="display:flex;align-items:center;gap:8px;"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="var(--color-success)" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> <strong>Distance:</strong> 10 &ndash; 25 km daily</li>
+        <li style="display:flex;align-items:center;gap:8px;"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="var(--color-success)" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> <strong>Frame:</strong> All-road, wider gear range, rear rack</li>
+        <li style="display:flex;align-items:center;gap:8px;"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="var(--color-success)" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> <strong>Includes:</strong> Helmet, lock, lights &amp; fitting</li>
+      </ul>
+    </div>
+    <a class="btn btn-primary btn-block" href="bike-hybrid.html">View Details</a>
+  </div>
+
+  <div class="card" style="display:flex;flex-direction:column;justify-content:space-between;padding:24px;background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-lg);box-shadow:var(--shadow-sm);">
+    <div>
+      <span class="badge badge-accent" style="margin-bottom:12px;display:inline-block;">Electric</span>
+      <h3 style="font-size:1.25rem;margin-bottom:8px;">The Ascent</h3>
+      <p style="font-size:1.75rem;font-weight:700;color:var(--color-primary);margin-bottom:4px;">$38.00 <span style="font-size:0.9rem;font-weight:400;color:var(--color-text-muted);">/ day</span></p>
+      <p class="text-muted" style="font-size:0.875rem;margin-bottom:16px;">+$75.00 refundable deposit</p>
+      <ul style="list-style:none;padding:0;margin:0 0 20px 0;display:flex;flex-direction:column;gap:8px;font-size:0.9rem;">
+        <li style="display:flex;align-items:center;gap:8px;"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="var(--color-success)" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> <strong>Terrain:</strong> Hills &amp; Long-distance</li>
+        <li style="display:flex;align-items:center;gap:8px;"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="var(--color-success)" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> <strong>Distance:</strong> 20 &ndash; 60 km daily</li>
+        <li style="display:flex;align-items:center;gap:8px;"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="var(--color-success)" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> <strong>Frame:</strong> 250W Pedal Assist, integrated battery</li>
+        <li style="display:flex;align-items:center;gap:8px;"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="var(--color-success)" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> <strong>Includes:</strong> Helmet, lock, lights &amp; fitting</li>
+      </ul>
+    </div>
+    <a class="btn btn-secondary btn-block" href="bike-electric.html">View Details</a>
+  </div>
+</div></div></div></section><section class="section section-alt" aria-labelledby="inc-h"><div class="container"><div class="section-intro" data-animate="fade-up"><p class="eyebrow">Standard inclusions</p><h2 id="inc-h">What comes with every bicycle</h2></div><div class="card-grid"><div class="card"><h3>Sanitized Helmet</h3><p>Adjustable safety helmet fitted to your head size at pickup.</p></div><div class="card"><h3>Heavy-Duty Lock</h3><p>Keyed or combination lock to secure your ride during stops.</p></div><div class="card"><h3>LED Lights</h3><p>High-visibility front headlight and rear tail light for evening safety.</p></div></div></div></section><section class="section" aria-labelledby="rules-summary-h"><div class="container split"><div class="split-copy" data-animate="fade-right"><p class="eyebrow">Rental guidelines</p><h2 id="rules-summary-h">Rental length & rules</h2><p>Rental blocks are full 24-hour days (1 to 14 days). Extensions are available for 1 to 7 additional days without an additional deposit.</p><a class="btn btn-secondary" href="rules-deposit.html">Read full rules & deposit policy</a></div><div data-animate="scale-in"><img src="assets/images/tour-moderate.svg" alt="Illustration of rider following trail rules" loading="lazy"></div></div></section><section class="section section-alt" aria-labelledby="hubs-alloc-h"><div class="container"><div class="section-intro" data-animate="mask-wipe"><p class="eyebrow">Hub allocation</p><h2 id="hubs-alloc-h">Assigned pickup hubs</h2></div><div class="card-grid"><div class="card"><h3>Central Square</h3><p>Wayfarer City Bicycles ready for old quarter exploration.</p></div><div class="card"><h3>Riverside Dock</h3><p>Crosscut Hybrid Bicycles ready for waterfront paths.</p></div><div class="card"><h3>Harbor Terrace</h3><p>Ascent Electric Bicycles ready for hillside climbs.</p></div></div></div></section><section class="section" aria-labelledby="maint-h"><div class="container split"><div data-animate="fade-right"><img src="assets/images/hero-home.svg" alt="Illustration of mechanic tuning bicycle" loading="lazy"></div><div class="split-copy" data-animate="fade-left"><p class="eyebrow">Quality assurance</p><h2 id="maint-h">Daily maintenance standard</h2><p>Every bicycle undergoes a multi-point safety inspection, tyre pressure check, and brake test before handing over at the hub.</p></div></div></section><section class="section section-alt" aria-labelledby="book-fl-cta"><div class="container section-intro" data-animate="scale-in"><h2 id="book-fl-cta">Ready to pick your ride?</h2><p>Save an estimated booking plan to your dashboard now.</p><div class="actions"><a class="btn btn-primary" href="signup.html">Start planning</a><a class="btn btn-secondary" href="pricing.html">View pricing</a></div></div></section></main>
+<div id="site-footer"></div>
+<script src="js/data.js"></script>
+<script src="js/calculations.js"></script>
+<script src="js/shell.js"></script>
+<script src="assets/gsap/gsap.min.js"></script>
+<script src="assets/gsap/ScrollTrigger.min.js"></script>
+<script src="js/motion.js"></script>
+<script>
+PerfectBikeShell.mount("fleet");
+</script>
+</body>
+</html>

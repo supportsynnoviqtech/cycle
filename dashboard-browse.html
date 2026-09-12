@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Browse Catalogue &ndash; Dashboard &mdash; PerfectBike</title>
+<meta name="description" content="Browse Catalogue &mdash; PerfectBike Dashboard.">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/layout.css">
+<script src="js/storage.js"></script>
+<script src="js/theme.js"></script>
+</head>
+<body class="dash-body">
+<div class="dash-shell">
+  <div id="dash-sidebar-mount"></div>
+  <main class="dash-main" id="main">
+
+    <header class="dash-header">
+      <div>
+        <button type="button" class="icon-control dash-mobile-toggle js-dash-mobile-open" aria-label="Open sidebar menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+        <div>
+          <h1 style="font-size:1.5rem;margin:0;">Browse Catalogue</h1>
+          <p class="text-muted" style="margin-top:2px;font-size:0.85rem;">Explore available bicycles and guided city tours.</p>
+        </div>
+      </div>
+      <div class="actions">
+        <a class="btn btn-primary btn-sm" href="dashboard-book.html">Go to Booking Form</a>
+      </div>
+    </header>
+
+    <div class="dash-content">
+
+      <section class="section-tight" aria-labelledby="br-search-h">
+        <h2 class="sr-only" id="br-search-h">Search catalogue</h2>
+        <div class="card">
+          <div style="display:flex;gap:16px;flex-wrap:wrap;align-items:flex-end;">
+            <div class="field" style="flex:1;min-width:200px;margin-bottom:0;">
+              <label for="br-search-input">Search models or tours</label>
+              <input class="input" id="br-search-input" type="text" placeholder="Filter by name, category, or hub...">
+            </div>
+            <div class="field" style="margin-bottom:0;">
+              <label for="br-filter-select">Category</label>
+              <select class="input" id="br-filter-select">
+                <option value="all" selected>All Categories</option>
+                <option value="city">City</option>
+                <option value="hybrid">Hybrid</option>
+                <option value="electric">Electric</option>
+                <option value="tour">Guided Tours</option>
+              </select>
+            </div>
+          </div>
+          <p class="text-muted" id="br-result-count" style="margin-top:12px;margin-bottom:0;font-size:0.85rem;">Showing all 5 catalogue items.</p>
+        </div>
+      </section>
+
+      <section class="section-tight" data-catalogue-item data-name="the wayfarer city central square hub" data-category="city" aria-labelledby="br-city-h">
+        <div class="section-intro" style="text-align:start;margin-bottom:16px;">
+          <p class="eyebrow">City Category</p>
+          <h2 id="br-city-h">The Wayfarer ($18.00 / day)</h2>
+        </div>
+        <div class="card split">
+          <div data-animate="fade-right"><img src="assets/images/bike-city.svg" alt="The Wayfarer" loading="lazy"></div>
+          <div class="split-copy">
+            <p>Light, upright, made for weaving through traffic and errands alike.</p>
+            <p><strong>Hub:</strong> Central Square Hub &ndash; <strong>Deposit:</strong> $75.00 (refundable)</p>
+            <p class="text-muted">Includes helmet, lock, front &amp; rear lights, and free fitting.</p>
+            <a class="btn btn-primary btn-sm" href="dashboard-book.html?bike=city">Book The Wayfarer</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-tight" data-catalogue-item data-name="the crosscut hybrid riverside dock hub" data-category="hybrid" aria-labelledby="br-hyb-h">
+        <div class="section-intro" style="text-align:start;margin-bottom:16px;">
+          <p class="eyebrow">Hybrid Category</p>
+          <h2 id="br-hyb-h">The Crosscut ($26.00 / day)</h2>
+        </div>
+        <div class="card split">
+          <div data-animate="fade-right"><img src="assets/images/bike-hybrid.svg" alt="The Crosscut" loading="lazy"></div>
+          <div class="split-copy">
+            <p>A do-anything build for longer rides across mixed terrain.</p>
+            <p><strong>Hub:</strong> Riverside Dock Hub &ndash; <strong>Deposit:</strong> $75.00 (refundable)</p>
+            <p class="text-muted">Includes helmet, lock, front &amp; rear lights, and free fitting.</p>
+            <a class="btn btn-primary btn-sm" href="dashboard-book.html?bike=hybrid">Book The Crosscut</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-tight" data-catalogue-item data-name="the ascent electric harbor terrace hub" data-category="electric" aria-labelledby="br-elec-h">
+        <div class="section-intro" style="text-align:start;margin-bottom:16px;">
+          <p class="eyebrow">Electric Category</p>
+          <h2 id="br-elec-h">The Ascent ($38.00 / day)</h2>
+        </div>
+        <div class="card split">
+          <div data-animate="fade-right"><img src="assets/images/bike-electric.svg" alt="The Ascent" loading="lazy"></div>
+          <div class="split-copy">
+            <p>Pedal-assist power for hills, distance, and hot afternoons.</p>
+            <p><strong>Hub:</strong> Harbor Terrace Hub &ndash; <strong>Deposit:</strong> $75.00 (refundable)</p>
+            <p class="text-muted">Includes helmet, lock, front &amp; rear lights, and free fitting.</p>
+            <a class="btn btn-primary btn-sm" href="dashboard-book.html?bike=electric">Book The Ascent</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-tight" data-catalogue-item data-name="the morning loop tour central square hub easy" data-category="tour" aria-labelledby="br-tour1-h">
+        <div class="section-intro" style="text-align:start;margin-bottom:16px;">
+          <p class="eyebrow">Guided Tour 01</p>
+          <h2 id="br-tour1-h">The Morning Loop ($150.00 / group)</h2>
+        </div>
+        <div class="card split">
+          <div data-animate="fade-right"><img src="assets/images/tour-easy.svg" alt="Morning Loop" loading="lazy"></div>
+          <div class="split-copy">
+            <p>A relaxed loop through the old quarter and the harbor promenade.</p>
+            <p>Easy &ndash; 12km &ndash; 3 Hours &ndash; 1&ndash;6 Riders &ndash; No Deposit</p>
+            <p class="text-muted">Departs Central Square Hub. Includes bicycle, helmet, guide, fitting, and briefing.</p>
+            <a class="btn btn-primary btn-sm" href="dashboard-book.html?tour=easy">Book Morning Loop</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-tight" data-catalogue-item data-name="the ridgeline circuit tour harbor terrace hub moderate" data-category="tour" aria-labelledby="br-tour2-h">
+        <div class="section-intro" style="text-align:start;margin-bottom:16px;">
+          <p class="eyebrow">Guided Tour 02</p>
+          <h2 id="br-tour2-h">The Ridgeline Circuit ($210.00 / group)</h2>
+        </div>
+        <div class="card split">
+          <div data-animate="fade-right"><img src="assets/images/tour-moderate.svg" alt="Ridgeline Circuit" loading="lazy"></div>
+          <div class="split-copy">
+            <p>A longer route with a climb to the overlook and a fast return along the river.</p>
+            <p>Moderate &ndash; 22km &ndash; 4 Hours &ndash; 1&ndash;6 Riders &ndash; No Deposit</p>
+            <p class="text-muted">Departs Harbor Terrace Hub. Includes bicycle, helmet, guide, fitting, and briefing.</p>
+            <a class="btn btn-primary btn-sm" href="dashboard-book.html?tour=moderate">Book Ridgeline Circuit</a>
+          </div>
+        </div>
+      </section>
+
+      <p class="text-muted" id="br-no-results" style="display:none;text-align:center;padding:24px 0;">No catalogue items match your search. Try a different keyword or category.</p>
+
+      <section class="section-tight" aria-labelledby="br-avail-h">
+        <div class="section-intro" style="text-align:start;margin-bottom:16px;">
+          <p class="eyebrow">Live Availability</p>
+          <h2 id="br-avail-h">Hub stock status</h2>
+        </div>
+        <div class="card"><p>All 3 bicycle categories and 2 tour options are currently available for booking at all 3 hubs.</p></div>
+      </section>
+
+      <section class="section-tight" aria-labelledby="br-inc-h">
+        <div class="section-intro" style="text-align:start;margin-bottom:16px;">
+          <p class="eyebrow">Equipment</p>
+          <h2 id="br-inc-h">Included accessories overview</h2>
+        </div>
+        <div class="card"><p>Helmets, locks, front/rear LED lights, and a pre-ride fitting are included with every bicycle rental at no extra charge.</p></div>
+      </section>
+
+      <section class="section-tight" aria-labelledby="browse-matrix-h">
+        <div class="section-intro" style="text-align:start;margin-bottom:16px;">
+          <p class="eyebrow">Catalogue Matrix</p>
+          <h2 id="browse-matrix-h">Fleet &amp; tour specifications summary</h2>
+        </div>
+        <div class="table-wrapper">
+          <table class="table">
+            <thead><tr><th>Model / Tour</th><th>Category</th><th>Rate</th><th>Hub</th><th>Deposit</th></tr></thead>
+            <tbody>
+              <tr><td>The Wayfarer</td><td>City</td><td>$18.00 / day</td><td>Central Square Hub</td><td>$75.00</td></tr>
+              <tr><td>The Crosscut</td><td>Hybrid</td><td>$26.00 / day</td><td>Riverside Dock Hub</td><td>$75.00</td></tr>
+              <tr><td>The Ascent</td><td>Electric</td><td>$38.00 / day</td><td>Harbor Terrace Hub</td><td>$75.00</td></tr>
+              <tr><td>The Morning Loop</td><td>Guided Tour</td><td>$150.00 / group</td><td>Central Square Hub</td><td>None</td></tr>
+              <tr><td>The Ridgeline Circuit</td><td>Guided Tour</td><td>$210.00 / group</td><td>Harbor Terrace Hub</td><td>None</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="section-tight" aria-labelledby="br-cta-h">
+        <h2 class="sr-only" id="br-cta-h">Ready to book</h2>
+        <div class="card" style="text-align:center;">
+          <p>Ready to confirm your dates?</p>
+          <a class="btn btn-primary" href="dashboard-book.html">Go to Booking Form</a>
+        </div>
+      </section>
+
+    </div>
+  </main>
+</div>
+<script src="js/data.js"></script>
+<script src="js/calculations.js"></script>
+<script src="js/dashboard.js"></script>
+<script src="assets/gsap/gsap.min.js"></script>
+<script src="assets/gsap/ScrollTrigger.min.js"></script>
+<script src="js/motion.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  PerfectBikeDashboard.mountSidebar("browse");
+
+  const searchInput = document.getElementById("br-search-input");
+  const filterSelect = document.getElementById("br-filter-select");
+  const items = Array.from(document.querySelectorAll("[data-catalogue-item]"));
+  const countEl = document.getElementById("br-result-count");
+  const noResultsEl = document.getElementById("br-no-results");
+
+  function applyFilter() {
+    const term = (searchInput.value || "").trim().toLowerCase();
+    const category = filterSelect.value;
+    let visible = 0;
+    items.forEach((item) => {
+      const matchesTerm = !term || item.dataset.name.includes(term);
+      const matchesCategory = category === "all" || item.dataset.category === category;
+      const show = matchesTerm && matchesCategory;
+      item.style.display = show ? "" : "none";
+      if (show) visible += 1;
+    });
+    countEl.textContent = visible === items.length
+      ? `Showing all ${items.length} catalogue items.`
+      : `Showing ${visible} of ${items.length} catalogue items.`;
+    noResultsEl.style.display = visible === 0 ? "block" : "none";
+  }
+
+  searchInput?.addEventListener("input", applyFilter);
+  filterSelect?.addEventListener("change", applyFilter);
+});
+</script>
+</body>
+</html>

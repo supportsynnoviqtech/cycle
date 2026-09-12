@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Documents &ndash; Dashboard &mdash; PerfectBike</title>
+<meta name="description" content="Documents &ndash; PerfectBike Dashboard.">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/layout.css">
+<script src="js/storage.js"></script>
+<script src="js/theme.js"></script>
+</head>
+<body class="dash-body">
+<div class="dash-shell">
+  <div id="dash-sidebar-mount"></div>
+  <main class="dash-main" id="main">
+
+    <header class="dash-header">
+      <div>
+        <button type="button" class="icon-control dash-mobile-toggle js-dash-mobile-open" aria-label="Open sidebar menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+        <div>
+          <h1 style="font-size:1.5rem;margin:0;">Documents &amp; Estimates</h1>
+          <p class="text-muted" style="margin-top:2px;font-size:0.85rem;">Honest demonstration receipts, agreements, and itineraries.</p>
+        </div>
+      </div>
+    </header>
+
+    <div class="dash-content">
+
+      <section class="section-tight" aria-labelledby="doc-receipt-h">
+        <div class="section-intro" style="text-align:start;margin-bottom:16px;">
+          <p class="eyebrow">Sample Receipts</p>
+          <h2 id="doc-receipt-h">Receipt estimate</h2>
+        </div>
+        <div class="card printable-doc" style="max-width:720px;">
+          <div style="display:flex;justify-content:space-between;border-bottom:1px solid var(--color-border);padding-bottom:12px;">
+            <div><h3>Sample Receipt</h3><p class="badge badge-warning">Sample &ndash; no payment processed.</p></div>
+            <div><strong>Ref: SMP-1001</strong></div>
+          </div>
+          <div style="margin-block:16px;">
+            <p><strong>Item:</strong> The Crosscut (Hybrid Bicycle)</p>
+            <p><strong>Rental Length:</strong> 2 Days ($26.00 / day)</p>
+            <p><strong>Security Deposit:</strong> $75.00 (refundable)</p>
+            <p style="font-size:1.25rem;color:var(--color-primary);margin-top:8px;"><strong>Total Amount:</strong> $127.00</p>
+          </div>
+          <div style="border-top:1px solid var(--color-border);padding-top:12px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+            <span class="text-muted">Honest Demonstration Document</span>
+            <button class="btn btn-primary btn-sm" type="button" onclick="window.print();">Print / Save as PDF</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-tight" aria-labelledby="doc-agree-h">
+        <div class="section-intro" style="text-align:start;margin-bottom:16px;">
+          <p class="eyebrow">Sample Agreements</p>
+          <h2 id="doc-agree-h">Rental agreement fixture</h2>
+        </div>
+        <div class="card printable-doc" style="max-width:720px;">
+          <div style="display:flex;justify-content:space-between;border-bottom:1px solid var(--color-border);padding-bottom:12px;">
+            <div><h3>Sample Rental Agreement</h3><p class="badge badge-warning">Sample &ndash; not legally executed.</p></div>
+            <div><strong>Ref: SMP-1001</strong></div>
+          </div>
+          <div style="margin-block:16px;">
+            <p>This document is an illustrative demonstration agreement for bicycle rental SMP-1001.</p>
+            <p><strong>Pickup Hub:</strong> Riverside Dock Hub</p>
+            <p><strong>Inclusions:</strong> Helmet, lock, front &amp; rear lights, fitting</p>
+          </div>
+          <div style="border-top:1px solid var(--color-border);padding-top:12px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+            <span class="text-muted">Honest Demonstration Document</span>
+            <button class="btn btn-secondary btn-sm" type="button" onclick="window.print();">Print / Save as PDF</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-tight" aria-labelledby="doc-pdf-h">
+        <div class="section-intro" style="text-align:start;margin-bottom:16px;">
+          <p class="eyebrow">Download Instructions</p>
+          <h2 id="doc-pdf-h">Browser print-to-PDF guide</h2>
+        </div>
+        <div class="card"><p>This assessment supplies genuine printable HTML documents. To save one as a PDF, click <strong>Print / Save as PDF</strong> above and choose <strong>&ldquo;Save as PDF&rdquo;</strong> in your browser print window. HTML files are never renamed as fabricated PDFs.</p></div>
+      </section>
+
+      <section class="section-tight" aria-labelledby="doc-tour-h">
+        <div class="section-intro" style="text-align:start;margin-bottom:16px;">
+          <p class="eyebrow">Tour Itineraries</p>
+          <h2 id="doc-tour-h">Trip itinerary estimate</h2>
+        </div>
+        <div class="card printable-doc" style="max-width:720px;">
+          <div style="display:flex;justify-content:space-between;border-bottom:1px solid var(--color-border);padding-bottom:12px;">
+            <div><h3>Trip Itinerary (Planning Estimate)</h3><p class="badge badge-primary">Illustrative Itinerary</p></div>
+            <div><strong>Ref: TOUR-901</strong></div>
+          </div>
+          <div style="margin-block:16px;">
+            <p><strong>Tour Name:</strong> The Morning Loop (12km Guided Tour)</p>
+            <p><strong>Group Tariff:</strong> $150.00 / group (No deposit)</p>
+            <p><strong>Departure:</strong> Central Square Hub at 08:45 UTC</p>
+          </div>
+          <div style="border-top:1px solid var(--color-border);padding-top:12px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+            <span class="text-muted">Illustrative Planning Document</span>
+            <button class="btn btn-secondary btn-sm" type="button" onclick="window.print();">Print / Save as PDF</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-tight" aria-labelledby="doc-personal-h">
+        <div class="section-intro" style="text-align:start;margin-bottom:16px;">
+          <p class="eyebrow">Personal Plans</p>
+          <h2 id="doc-personal-h">Saved planner estimates</h2>
+        </div>
+        <div class="card"><p>Personal plans saved from the <a href="dashboard-book.html">Book</a> form download estimates without fabricated signatures or payment charges.</p></div>
+      </section>
+
+      <section class="section-tight" aria-labelledby="doc-print-css">
+        <div class="section-intro" style="text-align:start;margin-bottom:16px;">
+          <p class="eyebrow">Print CSS</p>
+          <h2 id="doc-print-css">Clean print stylesheet</h2>
+        </div>
+        <div class="card"><p>Navigation, sidebars, and utility controls are hidden automatically during printing via <code>@media print</code> rules, leaving only the document itself on the page.</p></div>
+      </section>
+
+      <section class="section-tight" aria-labelledby="doc-integrity">
+        <div class="section-intro" style="text-align:start;margin-bottom:16px;">
+          <p class="eyebrow">Integrity Notice</p>
+          <h2 id="doc-integrity">Honest document disclaimers</h2>
+        </div>
+        <div class="card"><p>Disclaimers appear clearly on receipts, agreements, and download dialogs without cluttering every paragraph.</p></div>
+      </section>
+
+      <section class="section-tight" aria-labelledby="doc-formats">
+        <div class="section-intro" style="text-align:start;margin-bottom:16px;">
+          <p class="eyebrow">Formats</p>
+          <h2 id="doc-formats">Supported export formats</h2>
+        </div>
+        <div class="card"><p>Printable HTML with native browser Print to PDF, and JSON planner data export.</p></div>
+      </section>
+
+      <section class="section-tight" aria-labelledby="doc-integrity-h">
+        <div class="section-intro" style="text-align:start;margin-bottom:16px;">
+          <p class="eyebrow">Document Integrity</p>
+          <h2 id="doc-integrity-h">Document security &amp; sample verification</h2>
+        </div>
+        <div class="card"><p class="text-muted">Generated receipts and rental agreements carry a clear PerfectBike identification header and honest sample disclaimers for assessment compliance.</p></div>
+      </section>
+
+      <section class="section-tight" aria-labelledby="doc-foot-card">
+        <h2 class="sr-only" id="doc-foot-card">Footer note</h2>
+        <div class="card" style="text-align:center;"><p class="text-muted">PerfectBike Dashboard &ndash; Document Center</p></div>
+      </section>
+
+    </div>
+  </main>
+</div>
+<script src="js/data.js"></script>
+<script src="js/calculations.js"></script>
+<script src="js/dashboard.js"></script>
+<script src="assets/gsap/gsap.min.js"></script>
+<script src="assets/gsap/ScrollTrigger.min.js"></script>
+<script src="js/motion.js"></script>
+<script>
+PerfectBikeDashboard.mountSidebar("documents");
+</script>
+</body>
+</html>

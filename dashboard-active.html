@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Active Rental &ndash; Dashboard &mdash; PerfectBike</title>
+<meta name="description" content="Active Rental &ndash; PerfectBike Dashboard.">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/layout.css">
+<script src="js/storage.js"></script>
+<script src="js/theme.js"></script>
+</head>
+<body class="dash-body">
+<div class="dash-shell">
+  <div id="dash-sidebar-mount"></div>
+  <main class="dash-main" id="main">
+
+    <header class="dash-header">
+      <div>
+        <button type="button" class="icon-control dash-mobile-toggle js-dash-mobile-open" aria-label="Open sidebar menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+        <div>
+          <h1 style="font-size:1.5rem;margin:0;">Active Rental</h1>
+          <p class="text-muted" style="margin-top:2px;font-size:0.85rem;">Manage your current ride on the road.</p>
+        </div>
+      </div>
+      <div class="actions">
+        <a class="btn btn-primary btn-sm" href="dashboard-extend.html">Extend This Rental</a>
+      </div>
+    </header>
+
+    <div class="dash-content">
+
+      <section class="section-tight" aria-labelledby="act-card-h">
+        <h2 class="sr-only" id="act-card-h">Active rental details</h2>
+        <div class="card" style="border-color:var(--color-primary);">
+          <span class="badge badge-success" style="width:fit-content;margin-bottom:12px;">Active Now</span>
+          <h2>The Crosscut (Hybrid Bicycle)</h2>
+          <p class="text-muted">Reference #SMP-1001 &ndash; Assigned Hub: Riverside Dock Hub</p>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;margin-block:16px;">
+            <div class="card" style="background:var(--color-surface-sunken);">
+              <h4>Daily Tariff</h4>
+              <p style="font-size:1.25rem;font-weight:700;">$26.00 / day</p>
+            </div>
+            <div class="card" style="background:var(--color-surface-sunken);">
+              <h4>Security Deposit</h4>
+              <p style="font-size:1.25rem;font-weight:700;">$75.00</p>
+            </div>
+            <div class="card" style="background:var(--color-surface-sunken);">
+              <h4>Rental Length</h4>
+              <p style="font-size:1.25rem;font-weight:700;">2 Days</p>
+              <p class="text-muted" style="margin:0;">2026-09-10 &rarr; 2026-09-12</p>
+            </div>
+            <div class="card" style="background:var(--color-surface-sunken);">
+              <h4>Total Charged</h4>
+              <p style="font-size:1.25rem;font-weight:700;color:var(--color-primary);">$127.00</p>
+            </div>
+          </div>
+          <div class="actions">
+            <a class="btn btn-primary btn-sm" href="dashboard-extend.html">Extend This Rental</a>
+            <a class="btn btn-secondary btn-sm" href="dashboard-documents.html">View Agreement</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-tight" aria-labelledby="act-time-h">
+        <div class="section-intro" style="text-align:start;margin-bottom:16px;">
+          <p class="eyebrow">Reference Clock</p>
+          <h2 id="act-time-h">Countdown clock status</h2>
+        </div>
+        <div class="card"><p>Sample rental status is derived from an immutable <code>SAMPLE_REFERENCE_NOW</code> constant (2026-09-11 12:00 UTC), so it never drifts from page to page.</p></div>
+      </section>
+
+      <section class="section-tight" aria-labelledby="act-hub-h">
+        <div class="section-intro" style="text-align:start;margin-bottom:16px;">
+          <p class="eyebrow">Return Guidelines</p>
+          <h2 id="act-hub-h">Return hub instructions</h2>
+        </div>
+        <div class="card"><p>Return the bicycle to Riverside Dock Hub, or any other hub, before 20:00 UTC on the scheduled end date.</p></div>
+      </section>
+
+      <section class="section-tight" aria-labelledby="act-gear-h">
+        <div class="section-intro" style="text-align:start;margin-bottom:16px;">
+          <p class="eyebrow">Equipment Checklist</p>
+          <h2 id="act-gear-h">Verification of included gear</h2>
+        </div>
+        <div class="card">
+          <ul style="list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;">
+            <li>&#10003; Helmet (fitted)</li>
+            <li>&#10003; Heavy-duty lock &amp; key</li>
+            <li>&#10003; Front LED light</li>
+            <li>&#10003; Rear LED light</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section-tight" aria-labelledby="act-ext-preview">
+        <div class="section-intro" style="text-align:start;margin-bottom:16px;">
+          <p class="eyebrow">Need More Time?</p>
+          <h2 id="act-ext-preview">Extension preview</h2>
+        </div>
+        <div class="card"><p>Extend for 1 to 7 additional days at your original rate ($26.00/day) with no additional deposit required.</p></div>
+      </section>
+
+      <section class="section-tight" aria-labelledby="act-doc-link">
+        <div class="section-intro" style="text-align:start;margin-bottom:16px;">
+          <p class="eyebrow">Receipt &amp; Agreement</p>
+          <h2 id="act-doc-link">Sample document access</h2>
+        </div>
+        <div class="card"><p>Sample receipts state &ldquo;Sample &ndash; no payment processed.&rdquo; Sample agreements state &ldquo;Sample &ndash; not legally executed.&rdquo; <a href="dashboard-documents.html">View documents &rarr;</a></p></div>
+      </section>
+
+      <section class="section-tight" aria-labelledby="act-assist-h">
+        <div class="section-intro" style="text-align:start;margin-bottom:16px;">
+          <p class="eyebrow">Assistance</p>
+          <h2 id="act-assist-h">Hub assistance hours</h2>
+        </div>
+        <div class="card"><p>Staff are available at all 3 hubs daily from 08:00 to 20:00 UTC.</p></div>
+      </section>
+
+      <section class="section-tight" aria-labelledby="active-safety-h">
+        <div class="section-intro" style="text-align:start;margin-bottom:16px;">
+          <p class="eyebrow">Safety Guidelines</p>
+          <h2 id="active-safety-h">Rider safety &amp; emergency protocol</h2>
+        </div>
+        <div class="card"><p class="text-muted">Always wear your complimentary helmet and obey local traffic signals. For 24/7 roadside assistance during active rentals, call the hotline printed on your handlebar badge.</p></div>
+      </section>
+
+      <section class="section-tight" aria-labelledby="act-demo-note">
+        <div class="section-intro" style="text-align:start;margin-bottom:16px;">
+          <p class="eyebrow">Notice</p>
+          <h2 id="act-demo-note">Demonstration active record</h2>
+        </div>
+        <div class="card"><p>This record represents an illustrative active demonstration rental for evaluation &ndash; no payment was processed.</p></div>
+      </section>
+
+      <section class="section-tight" aria-labelledby="act-foot-card">
+        <h2 class="sr-only" id="act-foot-card">Footer note</h2>
+        <div class="card" style="text-align:center;"><p class="text-muted">PerfectBike Dashboard &ndash; Active Vehicle Manager</p></div>
+      </section>
+
+    </div>
+  </main>
+</div>
+<script src="js/data.js"></script>
+<script src="js/calculations.js"></script>
+<script src="js/dashboard.js"></script>
+<script src="assets/gsap/gsap.min.js"></script>
+<script src="assets/gsap/ScrollTrigger.min.js"></script>
+<script src="js/motion.js"></script>
+<script>
+PerfectBikeDashboard.mountSidebar("active");
+</script>
+</body>
+</html>

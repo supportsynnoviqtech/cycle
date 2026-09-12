@@ -1,0 +1,143 @@
+/* ==========================================================================
+   PerfectBike — Design Tokens
+   Colour, type, spacing, radius, shadow, motion-duration custom properties.
+   Light theme is default; [data-theme="dark"] overrides the same token names
+   with a deliberately re-composed dark palette (not an inversion).
+   ========================================================================== */
+
+@font-face {
+  font-family: "Fraunces";
+  src: url("../assets/fonts/fraunces.ttf") format("truetype-variations");
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../assets/fonts/inter.ttf") format("truetype-variations");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* ---- Colour: light (default) ---- */
+  --color-primary: #1F3F8C;
+  --color-primary-strong: #16306B;
+  --color-primary-soft: #EAF0FE;
+  --color-secondary: #E8A93B;
+  --color-secondary-strong: #C68A22;
+  --color-accent: #E15B4B;
+  --color-bg: #F7F5F0;
+  --color-surface: #FFFFFF;
+  --color-surface-elevated: #FFFFFF;
+  --color-surface-sunken: #F0EDE6;
+  --color-text: #1B2130;
+  --color-text-muted: #5B6478;
+  --color-text-on-primary: #FFFFFF;
+  --color-border: #DCD7CC;
+  --color-border-strong: #C3BDAF;
+  --color-success: #2F8F5B;
+  --color-success-soft: #E4F4EC;
+  --color-warning: #B8791A;
+  --color-warning-soft: #FBF0DD;
+  --color-danger: #C23B3B;
+  --color-danger-soft: #FBE9E9;
+  --color-focus-ring: #1F3F8C;
+  --shadow-card: 0 1px 2px rgba(27, 33, 48, 0.06), 0 8px 24px rgba(27, 33, 48, 0.06);
+  --shadow-elevated: 0 4px 8px rgba(27, 33, 48, 0.08), 0 24px 48px rgba(27, 33, 48, 0.12);
+  --shadow-focus: 0 0 0 3px rgba(31, 63, 140, 0.35);
+
+  /* ---- Type ---- */
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
+  --font-body: "Inter", ui-sans-serif, -apple-system, "Segoe UI", sans-serif;
+  --weight-heading: 600;
+  --weight-body: 400;
+  --weight-medium: 500;
+  --weight-strong: 700;
+
+  --size-eyebrow: 0.8125rem;
+  --size-label: 0.8125rem;
+  --size-small: 0.875rem;
+  --size-body: 1rem;
+  --size-body-large: 1.125rem;
+  --size-h3: clamp(1.375rem, 1.1rem + 1vw, 1.75rem);
+  --size-h2: clamp(1.75rem, 1.3rem + 2vw, 2.5rem);
+  --size-h1: clamp(2.25rem, 1.5rem + 3.2vw, 3.5rem);
+  --size-display: clamp(2.75rem, 1.6rem + 5vw, 5rem);
+
+  --measure-intro: 900px;
+  --measure-heading: 30ch;
+  --measure-body: 78ch;
+
+  /* ---- Spacing scale: 8 / 12 / 16 / 24 / 32 / 48 / 64 ---- */
+  --space-1: 8px;
+  --space-2: 12px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 32px;
+  --space-6: 48px;
+  --space-7: 64px;
+  --space-footer-join: 28px;
+
+  /* ---- Radius ---- */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-pill: 999px;
+
+  /* ---- Layout ---- */
+  --header-height: 76px;
+  --control-size: 44px;
+  --container-max: 1320px;
+
+  /* ---- Motion ---- */
+  --duration-fast: 160ms;
+  --duration-base: 320ms;
+  --duration-slow: 560ms;
+  --ease-standard: cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+/* ---- Colour: dark (deliberate re-composition, not an inversion) ---- */
+[data-theme="dark"] {
+  --color-primary: #7C9CF0;
+  --color-primary-strong: #A9C0F7;
+  --color-primary-soft: #1D2740;
+  --color-secondary: #F0BE64;
+  --color-secondary-strong: #F5D08C;
+  --color-accent: #F08172;
+  --color-bg: #10131A;
+  --color-surface: #181C26;
+  --color-surface-elevated: #1F2431;
+  --color-surface-sunken: #0C0E13;
+  --color-text: #EDEEF2;
+  --color-text-muted: #9BA3B7;
+  --color-text-on-primary: #10131A;
+  --color-border: #2B3040;
+  --color-border-strong: #3C4257;
+  --color-success: #55C793;
+  --color-success-soft: #143024;
+  --color-warning: #F0BE64;
+  --color-warning-soft: #34280F;
+  --color-danger: #F0837A;
+  --color-danger-soft: #3A1A1A;
+  --color-focus-ring: #A9C0F7;
+  --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.4), 0 8px 24px rgba(0, 0, 0, 0.35);
+  --shadow-elevated: 0 4px 8px rgba(0, 0, 0, 0.45), 0 24px 48px rgba(0, 0, 0, 0.5);
+  --shadow-focus: 0 0 0 3px rgba(169, 192, 247, 0.4);
+}
+
+/* Fallback for browsers without variable-font axis support in the format string above */
+@supports not (font-variation-settings: normal) {
+  @font-face {
+    font-family: "Fraunces";
+    src: url("../assets/fonts/fraunces.ttf") format("truetype");
+    font-weight: 300 700;
+  }
+  @font-face {
+    font-family: "Inter";
+    src: url("../assets/fonts/inter.ttf") format("truetype");
+    font-weight: 100 900;
+  }
+}

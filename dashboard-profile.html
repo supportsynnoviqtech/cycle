@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rider Profile &ndash; Dashboard &mdash; PerfectBike</title>
+<meta name="description" content="Rider Profile &ndash; PerfectBike Dashboard.">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/layout.css">
+<script src="js/storage.js"></script>
+<script src="js/theme.js"></script>
+</head>
+<body class="dash-body">
+<div class="dash-shell">
+  <div id="dash-sidebar-mount"></div>
+  <main class="dash-main" id="main">
+
+    <header class="dash-header">
+      <div>
+        <button type="button" class="icon-control dash-mobile-toggle js-dash-mobile-open" aria-label="Open sidebar menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+        <div>
+          <h1 style="font-size:1.5rem;margin:0;">Rider Profile</h1>
+          <p class="text-muted" style="margin-top:2px;font-size:0.85rem;">Manage your preferred name and rider preferences.</p>
+        </div>
+      </div>
+    </header>
+
+    <div class="dash-content">
+
+      <section class="section-tight" aria-labelledby="prof-form-h">
+        <h2 class="sr-only" id="prof-form-h">Profile form</h2>
+        <div class="card" style="max-width:640px;">
+          <form id="js-profile-form" novalidate>
+            <div class="field">
+              <label for="prof-name-input">Preferred Name (1&ndash;50 characters)</label>
+              <input class="input" id="prof-name-input" type="text" value="Rider" required minlength="1" maxlength="50">
+              <p class="hint">Your preferred name is rendered safely via <code>textContent</code> across all dashboard views.</p>
+            </div>
+            <div class="field">
+              <label for="prof-hub-select">Preferred Pickup Hub</label>
+              <select class="input" id="prof-hub-select">
+                <option value="central-square">Central Square Hub</option>
+                <option value="riverside-dock">Riverside Dock Hub</option>
+                <option value="harbor-terrace">Harbor Terrace Hub</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="prof-helmet-select">Helmet Size Preference</label>
+              <select class="input" id="prof-helmet-select">
+                <option value="S">Small (51&ndash;55 cm)</option>
+                <option value="M" selected>Medium (55&ndash;59 cm)</option>
+                <option value="L">Large (59&ndash;63 cm)</option>
+              </select>
+            </div>
+            <p class="text-muted" id="prof-success-msg" role="status" style="display:none;"></p>
+            <button class="btn btn-primary" type="submit">Save Profile Changes</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="section-tight" aria-labelledby="prof-xss-h">
+        <div class="section-intro" style="text-align:start;margin-bottom:16px;">
+          <p class="eyebrow">XSS Protection</p>
+          <h2 id="prof-xss-h">Safe text rendering</h2>
+        </div>
+        <div class="card"><p>User-entered names are treated strictly as text and rendered safely via <code>textContent</code> to prevent script injection.</p></div>
+      </section>
+
+      <section class="section-tight" aria-labelledby="prof-storage-h">
+        <div class="section-intro" style="text-align:start;margin-bottom:16px;">
+          <p class="eyebrow">Storage</p>
+          <h2 id="prof-storage-h">Local storage persistence</h2>
+        </div>
+        <div class="card"><p>Saved under the key <code>perfectbike.preferredName</code> in your browser&rsquo;s localStorage.</p></div>
+      </section>
+
+      <section class="section-tight" aria-labelledby="prof-privacy-h">
+        <div class="section-intro" style="text-align:start;margin-bottom:16px;">
+          <p class="eyebrow">Privacy Standard</p>
+          <h2 id="prof-privacy-h">Zero sensitive data collected</h2>
+        </div>
+        <div class="card"><p>No email addresses, passwords, credit card numbers, or identity documents are ever collected. Your preferred name and fitting preferences stay strictly in local browser storage and are never transmitted off your device.</p></div>
+      </section>
+
+      <section class="section-tight" aria-labelledby="prof-auth-h">
+        <div class="section-intro" style="text-align:start;margin-bottom:16px;">
+          <p class="eyebrow">Entry Model</p>
+          <h2 id="prof-auth-h">Passwordless demonstration flow</h2>
+        </div>
+        <div class="card"><p>Follows the preferred-name demonstration standard used throughout this assessment &ndash; no password or account creation is required.</p></div>
+      </section>
+
+      <section class="section-tight" aria-labelledby="prof-gear-h">
+        <div class="section-intro" style="text-align:start;margin-bottom:16px;">
+          <p class="eyebrow">Equipment Preferences</p>
+          <h2 id="prof-gear-h">Default fitting parameters</h2>
+        </div>
+        <div class="card"><p>Your helmet size preference pre-configures the hub fitting checklist for every new booking.</p></div>
+      </section>
+
+      <section class="section-tight" aria-labelledby="prof-signout-h">
+        <div class="section-intro" style="text-align:start;margin-bottom:16px;">
+          <p class="eyebrow">Sign Out</p>
+          <h2 id="prof-signout-h">Sign out behavior</h2>
+        </div>
+        <div class="card"><p>Signing out clears your preferred name and returns you to the entry screen, while preserving your saved planner records.</p></div>
+      </section>
+
+      <section class="section-tight" aria-labelledby="prof-reset-h">
+        <div class="section-intro" style="text-align:start;margin-bottom:16px;">
+          <p class="eyebrow">Full Reset</p>
+          <h2 id="prof-reset-h">Full reset behavior</h2>
+        </div>
+        <div class="card"><p>A full settings reset clears your preferred name and personal plans without automatically re-seeding the sample fixture. Manage this from <a href="dashboard-settings.html">Settings</a>.</p></div>
+      </section>
+
+      <section class="section-tight" aria-labelledby="prof-foot-card">
+        <h2 class="sr-only" id="prof-foot-card">Footer note</h2>
+        <div class="card" style="text-align:center;"><p class="text-muted">PerfectBike Dashboard &ndash; Rider Profile</p></div>
+      </section>
+
+    </div>
+  </main>
+</div>
+<script src="js/data.js"></script>
+<script src="js/calculations.js"></script>
+<script src="js/dashboard.js"></script>
+<script src="assets/gsap/gsap.min.js"></script>
+<script src="assets/gsap/ScrollTrigger.min.js"></script>
+<script src="js/motion.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  PerfectBikeDashboard.mountSidebar("profile");
+
+  const nameInput = document.getElementById("prof-name-input");
+  const hubSelect = document.getElementById("prof-hub-select");
+  const helmetSelect = document.getElementById("prof-helmet-select");
+  const successEl = document.getElementById("prof-success-msg");
+
+  const savedName = PerfectBikeStorage.getPreferredName();
+  if (savedName) nameInput.value = savedName;
+  const savedPrefs = PerfectBikeStorage.get("perfectbike.ridePrefs", null);
+  if (savedPrefs) {
+    if (savedPrefs.hub) hubSelect.value = savedPrefs.hub;
+    if (savedPrefs.helmet) helmetSelect.value = savedPrefs.helmet;
+  }
+
+  document.getElementById("js-profile-form").addEventListener("submit", (e) => {
+    e.preventDefault();
+    const name = nameInput.value.trim().slice(0, 50);
+    if (!name) {
+      successEl.style.display = "block";
+      successEl.textContent = "Preferred name cannot be empty.";
+      return;
+    }
+    PerfectBikeStorage.setPreferredName(name);
+    PerfectBikeStorage.set("perfectbike.ridePrefs", { hub: hubSelect.value, helmet: helmetSelect.value });
+    const greetingEl = document.getElementById("user-greeting-name");
+    if (greetingEl) greetingEl.textContent = name;
+    successEl.style.display = "block";
+    successEl.textContent = "Profile changes saved to this browser.";
+  });
+});
+</script>
+</body>
+</html>

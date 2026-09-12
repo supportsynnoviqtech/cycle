@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Notifications &ndash; Dashboard &mdash; PerfectBike</title>
+<meta name="description" content="Notifications &ndash; PerfectBike Dashboard.">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/layout.css">
+<script src="js/storage.js"></script>
+<script src="js/theme.js"></script>
+</head>
+<body class="dash-body">
+<div class="dash-shell">
+  <div id="dash-sidebar-mount"></div>
+  <main class="dash-main" id="main">
+
+    <header class="dash-header">
+      <div>
+        <button type="button" class="icon-control dash-mobile-toggle js-dash-mobile-open" aria-label="Open sidebar menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+        <div>
+          <h1 style="font-size:1.5rem;margin:0;">Notifications</h1>
+          <p class="text-muted" style="margin-top:2px;font-size:0.85rem;">Activity feed &amp; system alerts.</p>
+        </div>
+      </div>
+    </header>
+
+    <div class="dash-content">
+
+      <section class="section-tight" aria-labelledby="not-feed-h">
+        <h2 class="sr-only" id="not-feed-h">Notification feed</h2>
+        <div class="card">
+          <ul id="not-feed-list" style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:16px;">
+            <li style="display:flex;gap:12px;align-items:flex-start;border-bottom:1px solid var(--color-border);padding-bottom:12px;">
+              <span class="badge badge-primary">System</span>
+              <div><strong>Welcome to PerfectBike Dashboard</strong><p class="text-muted" style="margin-top:4px;">Your demonstration planner is active. Explore all 10 dashboard destinations.</p></div>
+            </li>
+            <li style="display:flex;gap:12px;align-items:flex-start;border-bottom:1px solid var(--color-border);padding-bottom:12px;">
+              <span class="badge badge-success">Fixture</span>
+              <div><strong>Sample Fixture Loaded</strong><p class="text-muted" style="margin-top:4px;">5 demonstration rentals loaded (1 active, 2 upcoming, 2 completed).</p></div>
+            </li>
+            <li style="display:flex;gap:12px;align-items:flex-start;">
+              <span class="badge badge-warning">Hub Notice</span>
+              <div><strong>Hub Operating Window</strong><p class="text-muted" style="margin-top:4px;">All hubs open 08:00 &ndash; 20:00 UTC daily.</p></div>
+            </li>
+          </ul>
+          <p class="text-muted" id="not-empty" style="display:none;margin:0;">No notifications right now.</p>
+        </div>
+      </section>
+
+      <section class="section-tight" aria-labelledby="not-storage-h">
+        <div class="section-intro" style="text-align:start;margin-bottom:16px;">
+          <p class="eyebrow">Notification Engine</p>
+          <h2 id="not-storage-h">Derived notification metrics</h2>
+        </div>
+        <div class="card"><p>Notifications are derived from system events and stored under <code>perfectbike.notifications</code>.</p></div>
+      </section>
+
+      <section class="section-tight" aria-labelledby="not-types-h">
+        <div class="section-intro" style="text-align:start;margin-bottom:16px;">
+          <p class="eyebrow">Alert Categories</p>
+          <h2 id="not-types-h">System, booking &amp; deadline alerts</h2>
+        </div>
+        <div class="card-grid">
+          <div class="card"><h3>System Alerts</h3><p>Platform notices and hub schedule updates.</p></div>
+          <div class="card"><h3>Booking Alerts</h3><p>Confirmation and document generation notices.</p></div>
+          <div class="card"><h3>Deadline Alerts</h3><p>Active rental return countdown reminders.</p></div>
+        </div>
+      </section>
+
+      <section class="section-tight" aria-labelledby="not-clear-h">
+        <div class="section-intro" style="text-align:start;margin-bottom:16px;">
+          <p class="eyebrow">Controls</p>
+          <h2 id="not-clear-h">Clear notifications</h2>
+        </div>
+        <div class="card"><button class="btn btn-secondary btn-sm" type="button" id="js-clear-notifications">Clear All Notifications</button></div>
+      </section>
+
+      <section class="section-tight" aria-labelledby="not-pref-h">
+        <div class="section-intro" style="text-align:start;margin-bottom:16px;">
+          <p class="eyebrow">Settings</p>
+          <h2 id="not-pref-h">Alert preferences</h2>
+        </div>
+        <div class="card"><p>In-app alerts are enabled for return deadlines and booking confirmations.</p></div>
+      </section>
+
+      <section class="section-tight" aria-labelledby="not-xss">
+        <div class="section-intro" style="text-align:start;margin-bottom:16px;">
+          <p class="eyebrow">Safety</p>
+          <h2 id="not-xss">Safe text injection</h2>
+        </div>
+        <div class="card"><p>Alert messages are rendered safely without HTML injection vulnerabilities.</p></div>
+      </section>
+
+      <section class="section-tight" aria-labelledby="not-persistence">
+        <div class="section-intro" style="text-align:start;margin-bottom:16px;">
+          <p class="eyebrow">Persistence</p>
+          <h2 id="not-persistence">Session persistence</h2>
+        </div>
+        <div class="card"><p>The notification log is preserved across page reloads until you clear it.</p></div>
+      </section>
+
+      <section class="section-tight" aria-labelledby="notif-dispatch-h">
+        <div class="section-intro" style="text-align:start;margin-bottom:16px;">
+          <p class="eyebrow">Notification Dispatch</p>
+          <h2 id="notif-dispatch-h">Alert dispatch &amp; quiet hours policy</h2>
+        </div>
+        <div class="card"><p class="text-muted">Notifications are generated locally for booking events, deadline countdowns, and system notices. Quiet hours suppress non-urgent alerts overnight.</p></div>
+      </section>
+
+      <section class="section-tight" aria-labelledby="not-demo">
+        <div class="section-intro" style="text-align:start;margin-bottom:16px;">
+          <p class="eyebrow">Notice</p>
+          <h2 id="not-demo">Demonstration alert log</h2>
+        </div>
+        <div class="card"><p>Notifications represent illustrative demonstration activity.</p></div>
+      </section>
+
+      <section class="section-tight" aria-labelledby="not-foot-card">
+        <h2 class="sr-only" id="not-foot-card">Footer note</h2>
+        <div class="card" style="text-align:center;"><p class="text-muted">PerfectBike Dashboard &ndash; Notification Feed</p></div>
+      </section>
+
+    </div>
+  </main>
+</div>
+<script src="js/data.js"></script>
+<script src="js/calculations.js"></script>
+<script src="js/dashboard.js"></script>
+<script src="assets/gsap/gsap.min.js"></script>
+<script src="assets/gsap/ScrollTrigger.min.js"></script>
+<script src="js/motion.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  PerfectBikeDashboard.mountSidebar("notifications");
+  document.getElementById("js-clear-notifications").addEventListener("click", () => {
+    document.getElementById("not-feed-list").style.display = "none";
+    document.getElementById("not-empty").style.display = "block";
+  });
+});
+</script>
+</body>
+</html>

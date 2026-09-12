@@ -1,0 +1,29 @@
+Project Allocation
+Bicycle Rental and City Tour Service frontend design test assessment
+Document 1 of 3 | SYN FE DESIGN 001 | Revision 2 | Issued 11 September 2026
+Assigned to Deepak Kumar B | SYN INT 0001 | Assigned by Manager
+Complete submission due on or before 12 September 2026 at 6 PM IST
+Develop a complete frontend-only Bicycle Rental and City Tour Service website with premium animations and a colourful, professional design. The attached Website Development Requirements is the controlling technical specification; the Final QA and QC Checklist must be completed with actual evidence before submission.
+Ongoing evaluation
+Senior QC Specialist Dev is continuing the overall performance evaluation of your earlier submissions. Management will notify you after the review and verification process is concluded. This allocation does not establish acceptance or closure of previous work.
+Required but not limited to
+The listed destinations are mandatory minimum coverage, not a limit. You may develop additional useful pages, menus and supporting views. Every created page or dashboard view must have at least ten meaningful sections, complete functionality, responsive behaviour and QA evidence. Additional scope must remain frontend-only and does not extend the deadline.
+Public pages: HOME, HOME 2, Fleet, City/Hybrid/Electric bicycle details, Guided Tours, two tour details, Pickup Locations, Rules and Deposit, and Pricing.
+Entry: separate Login and Sign Up pages using the preferred-name demonstration flow defined in Document 2.
+Customer dashboard: Overview, Browse, Book, Active, Extend, History, Documents, Profile, Notifications and Settings. Each destination must be fully implemented.
+Premium design and motion
+Deliver strong visual hierarchy, relevant photography/video, varied section compositions, polished cards and controls, consistent rich colour and professional typography. Premium section entrances, page-opening animations and interaction feedback are required, with reduced-motion and failure-safe alternatives. A basic page, repeated filler grids or a simple recolour is not sufficient.
+Assessment authority and delivery
+This three-document revision replaces the earlier two-attachment assignment package. Document 1 controls allocation, scope boundaries and deadline; Document 2 controls development requirements; Document 3 records self-verification and independent QC. The ten-section minimum applies everywhere and the expanded page list is not a ceiling.
+The final reference standard uses name-only frontend entry, isolated sample/planner records, sample downloads, detailed motion and whole-site regression requirements. Follow these requirements rather than the earlier password-form description. Site identity and sample product/location labels must be original; all three assignment documents carry Synnoviq branding only.
+AI assistance and originality
+AI assistance is allowed, but you must personally understand, review, correct and test everything submitted. Use original or properly licensed materials, retain licence/attribution evidence and document AI-assisted areas and your actual checks. AI-generated output is not automatically copyright-free.
+Required final package
+Hosted static review URL and complete editable source ZIP; accessible repository with the exact tested branch and commit.
+README and usage instructions, demo access/reset, route and ten-section inventory, design manifest and documented data/calculations.
+Completed final QA/QC checklist, real test evidence, screenshots/video, defect and retest register, known issues and unexecuted checks.
+Asset/licence/attribution and AI-assistance records; clean-build and extracted-package integrity evidence.
+Submission and acceptance
+Send the complete package to synnoviqtechnologies@gmail.com with director@synnoviq.com in CC. Subject: [SYN-FE-DESIGN-001] Final Submission - Deepak Kumar B. It must be received on or before 12 September 2026 at 6 PM IST. Acknowledge the allocation and raise specific blockers promptly with evidence; do not silently reduce scope or change the deadline.
+Self-check completion does not grant acceptance. Dev will independently evaluate visual quality, requirements, functionality, evidence and originality; Management will communicate the result.
+For SYNNOVIQ TECHNOLOGIES PRIVATE LIMITEDManagerAssignment authority

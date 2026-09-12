@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Book a Ride &ndash; Dashboard &mdash; PerfectBike</title>
+<meta name="description" content="Book a Ride &ndash; PerfectBike Dashboard.">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/layout.css">
+<script src="js/storage.js"></script>
+<script src="js/theme.js"></script>
+</head>
+<body class="dash-body">
+<div class="dash-shell">
+  <div id="dash-sidebar-mount"></div>
+  <main class="dash-main" id="main">
+
+    <header class="dash-header">
+      <div>
+        <button type="button" class="icon-control dash-mobile-toggle js-dash-mobile-open" aria-label="Open sidebar menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+        <div>
+          <h1 style="font-size:1.5rem;margin:0;">Book a Ride or Tour</h1>
+          <p class="text-muted" style="margin-top:2px;font-size:0.85rem;">Interactive live calculator &amp; booking engine.</p>
+        </div>
+      </div>
+    </header>
+
+    <div class="dash-content">
+
+      <section class="section-tight" aria-labelledby="bk-form-h">
+        <h2 class="sr-only" id="bk-form-h">Booking form</h2>
+        <div class="card" style="max-width:800px;">
+          <form id="js-booking-form" novalidate>
+
+            <div class="field">
+              <label for="bk-item-type">Service Type</label>
+              <select class="input" id="bk-item-type">
+                <option value="bike">Bicycle Rental</option>
+                <option value="tour">Guided Tour</option>
+              </select>
+            </div>
+
+            <div id="bk-bike-fields">
+              <div class="field">
+                <label for="bk-model">Select Model</label>
+                <select class="input" id="bk-model">
+                  <option value="city">The Wayfarer (City &ndash; $18.00/day)</option>
+                  <option value="hybrid" selected>The Crosscut (Hybrid &ndash; $26.00/day)</option>
+                  <option value="electric">The Ascent (Electric &ndash; $38.00/day)</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="bk-hub">Pickup Hub</label>
+                <select class="input" id="bk-hub">
+                  <option value="central-square">Central Square Hub (Old Quarter)</option>
+                  <option value="riverside-dock" selected>Riverside Dock Hub (Riverside)</option>
+                  <option value="harbor-terrace">Harbor Terrace Hub (Harbor)</option>
+                </select>
+              </div>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+                <div class="field">
+                  <label for="bk-start-date">Start Date</label>
+                  <input class="input" id="bk-start-date" type="date" required>
+                </div>
+                <div class="field">
+                  <label for="bk-days">Duration (Days)</label>
+                  <input class="input" id="bk-days" type="number" min="1" max="14" value="2">
+                  <p class="hint">Rentals run 1&ndash;14 full days.</p>
+                </div>
+              </div>
+              <div class="field" style="flex-direction:row;align-items:center;gap:8px;">
+                <input type="checkbox" id="bk-helmet-check" checked style="width:auto;">
+                <label for="bk-helmet-check" style="margin:0;">Add premium fitted helmet upgrade (+$5.00/day)</label>
+              </div>
+            </div>
+
+            <div id="bk-tour-fields" style="display:none;">
+              <div class="field">
+                <label for="bk-tour-select">Select Guided Tour</label>
+                <select class="input" id="bk-tour-select">
+                  <option value="easy">The Morning Loop (Easy &ndash; $150.00/group)</option>
+                  <option value="moderate">The Ridgeline Circuit (Moderate &ndash; $210.00/group)</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="bk-tour-date">Tour Date</label>
+                <input class="input" id="bk-tour-date" type="date">
+              </div>
+              <div class="field">
+                <label for="bk-riders">Number of Riders (1&ndash;6)</label>
+                <input class="input" id="bk-riders" type="number" min="1" max="6" value="2">
+                <p class="hint">Group tariff is flat per group, regardless of rider count within the limit.</p>
+              </div>
+            </div>
+
+            <div class="card" style="background:var(--color-surface-sunken);margin-block:16px;">
+              <h4 style="margin:0 0 8px 0;">Live Price Breakdown</h4>
+              <p>Rental Subtotal: <strong id="calc-subtotal">$52.00</strong></p>
+              <p>Refundable Deposit: <strong id="calc-deposit">$75.00</strong></p>
+              <p style="font-size:1.25rem;color:var(--color-primary);margin-top:8px;">Total Estimate: <strong id="calc-total">$127.00</strong></p>
+            </div>
+
+            <p class="error" id="bk-error-msg" role="alert"></p>
+            <p class="text-muted" id="bk-success-msg" role="status" style="display:none;"></p>
+            <button class="btn btn-primary btn-block" type="submit">Confirm Demonstration Booking</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="section-tight" aria-labelledby="bk-calc-note">
+        <div class="section-intro" style="text-align:start;margin-bottom:16px;">
+          <p class="eyebrow">Calculation Engine</p>
+          <h2 id="bk-calc-note">Central source of truth</h2>
+        </div>
+        <div class="card"><p>All rates ($18 / $26 / $38 per day), the $75 refundable deposit, and tour prices ($150 / $210 per group) are calculated live using <code>js/calculations.js</code>.</p></div>
+      </section>
+
+      <section class="section-tight" aria-labelledby="bk-conflict-h">
+        <div class="section-intro" style="text-align:start;margin-bottom:16px;">
+          <p class="eyebrow">Interval Validation</p>
+          <h2 id="bk-conflict-h">Overlap conflict detection</h2>
+        </div>
+        <div class="card"><p>New bookings are checked for overlapping intervals against your existing active and upcoming rentals before they are confirmed.</p></div>
+      </section>
+
+      <section class="section-tight" aria-labelledby="bk-hours-h">
+        <div class="section-intro" style="text-align:start;margin-bottom:16px;">
+          <p class="eyebrow">Pickup Windows</p>
+          <h2 id="bk-hours-h">Hub opening hours</h2>
+        </div>
+        <div class="card"><p>Pickup window opens 08:00 to 19:59 UTC daily. All 3 hubs close at 20:00 UTC.</p></div>
+      </section>
+
+      <section class="section-tight" aria-labelledby="bk-dep-h">
+        <div class="section-intro" style="text-align:start;margin-bottom:16px;">
+          <p class="eyebrow">Deposit Policy</p>
+          <h2 id="bk-dep-h">Separate deposit calculation</h2>
+        </div>
+        <div class="card"><p>Bicycle rentals add a refundable $75.00 deposit per bike, returned on inspection. Guided tours require no deposit.</p></div>
+      </section>
+
+      <section class="section-tight" aria-labelledby="bk-inc-h">
+        <div class="section-intro" style="text-align:start;margin-bottom:16px;">
+          <p class="eyebrow">Inclusions</p>
+          <h2 id="bk-inc-h">Standard inclusions</h2>
+        </div>
+        <div class="card"><p>Helmet, lock, LED lights, and a pre-ride fitting are included at no extra charge on every bicycle rental.</p></div>
+      </section>
+
+      <section class="section-tight" aria-labelledby="bk-isolation-h">
+        <div class="section-intro" style="text-align:start;margin-bottom:16px;">
+          <p class="eyebrow">Data Isolation</p>
+          <h2 id="bk-isolation-h">Personal vs sample isolation</h2>
+        </div>
+        <div class="card"><p>Your confirmed booking is saved to your personal rentals in browser local storage, isolated from the pre-seeded sample fixture.</p></div>
+      </section>
+
+      <section class="section-tight" aria-labelledby="bk-demo-h">
+        <div class="section-intro" style="text-align:start;margin-bottom:16px;">
+          <p class="eyebrow">Honest Disclaimer</p>
+          <h2 id="bk-demo-h">Demonstration notice</h2>
+        </div>
+        <div class="card"><p>This is a frontend demonstration &ndash; no payment is processed and no real reservation is created.</p></div>
+      </section>
+
+      <section class="section-tight" aria-labelledby="book-guarantee-h">
+        <div class="section-intro" style="text-align:start;margin-bottom:16px;">
+          <p class="eyebrow">Booking Guarantee</p>
+          <h2 id="book-guarantee-h">Zero hidden fees &amp; instant confirmation</h2>
+        </div>
+        <div class="card"><p class="text-muted">All quote totals are calculated in real-time as you adjust the form. Deposits are fully refundable upon return of the bicycle and included accessories in original condition.</p></div>
+      </section>
+
+      <section class="section-tight" aria-labelledby="bk-next-h">
+        <h2 class="sr-only" id="bk-next-h">What happens next</h2>
+        <div class="card" style="text-align:center;">
+          <p>After booking, view your ride in <a href="dashboard-active.html">Active</a> or <a href="dashboard-history.html">History</a>.</p>
+        </div>
+      </section>
+
+    </div>
+  </main>
+</div>
+<script src="js/data.js"></script>
+<script src="js/calculations.js"></script>
+<script src="js/dashboard.js"></script>
+<script src="assets/gsap/gsap.min.js"></script>
+<script src="assets/gsap/ScrollTrigger.min.js"></script>
+<script src="js/motion.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  PerfectBikeDashboard.mountSidebar("book");
+
+  const typeSelect = document.getElementById("bk-item-type");
+  const bikeFields = document.getElementById("bk-bike-fields");
+  const tourFields = document.getElementById("bk-tour-fields");
+
+  const modelSelect = document.getElementById("bk-model");
+  const hubSelect = document.getElementById("bk-hub");
+  const startDateInput = document.getElementById("bk-start-date");
+  const daysInput = document.getElementById("bk-days");
+  const helmetCheck = document.getElementById("bk-helmet-check");
+
+  const tourSelect = document.getElementById("bk-tour-select");
+  const tourDateInput = document.getElementById("bk-tour-date");
+  const ridersInput = document.getElementById("bk-riders");
+
+  const subtotalEl = document.getElementById("calc-subtotal");
+  const depositEl = document.getElementById("calc-deposit");
+  const totalEl = document.getElementById("calc-total");
+  const errorEl = document.getElementById("bk-error-msg");
+  const successEl = document.getElementById("bk-success-msg");
+
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("tour")) {
+    typeSelect.value = "tour";
+    if (["easy", "moderate"].includes(params.get("tour"))) tourSelect.value = params.get("tour");
+  } else if (params.get("bike") && ["city", "hybrid", "electric"].includes(params.get("bike"))) {
+    modelSelect.value = params.get("bike");
+  }
+
+  const HELMET_UPGRADE_PER_DAY = 5;
+
+  function updateFieldVisibility() {
+    const isTour = typeSelect.value === "tour";
+    bikeFields.style.display = isTour ? "none" : "block";
+    tourFields.style.display = isTour ? "block" : "none";
+  }
+
+  function updateCalc() {
+    errorEl.textContent = "";
+    if (typeSelect.value === "tour") {
+      const price = PerfectBikeCalc.calculateTourPrice(tourSelect.value);
+      subtotalEl.textContent = PerfectBikeCalc.formatMoney(price);
+      depositEl.textContent = PerfectBikeCalc.formatMoney(0);
+      totalEl.textContent = PerfectBikeCalc.formatMoney(price);
+      return;
+    }
+
+    const days = Math.max(1, Math.min(14, parseInt(daysInput.value, 10) || 1));
+    const dailyRate = PerfectBikeCalc.getDailyRate(modelSelect.value);
+    const helmetSurcharge = helmetCheck.checked ? HELMET_UPGRADE_PER_DAY * days : 0;
+    const subtotal = PerfectBikeCalc.calculateRentalTotal(modelSelect.value, days) + helmetSurcharge;
+    const deposit = PerfectBikeCalc.calculateDeposit(modelSelect.value);
+
+    subtotalEl.textContent = PerfectBikeCalc.formatMoney(subtotal);
+    depositEl.textContent = PerfectBikeCalc.formatMoney(deposit);
+    totalEl.textContent = PerfectBikeCalc.formatMoney(subtotal + deposit);
+  }
+
+  typeSelect.addEventListener("change", () => { updateFieldVisibility(); updateCalc(); });
+  [modelSelect, daysInput, helmetCheck].forEach((el) => el.addEventListener("input", updateCalc));
+  [tourSelect, ridersInput].forEach((el) => el.addEventListener("input", updateCalc));
+
+  updateFieldVisibility();
+  updateCalc();
+
+  document.getElementById("js-booking-form").addEventListener("submit", (e) => {
+    e.preventDefault();
+    errorEl.textContent = "";
+    successEl.style.display = "none";
+
+    const isTour = typeSelect.value === "tour";
+
+    if (!isTour) {
+      if (!startDateInput.value) {
+        errorEl.textContent = "Please choose a start date.";
+        return;
+      }
+      const days = Math.max(1, Math.min(14, parseInt(daysInput.value, 10) || 1));
+      const start = new Date(startDateInput.value + "T09:00:00Z");
+      const end = new Date(start.getTime());
+      end.setUTCDate(end.getUTCDate() + days);
+
+      const existing = PerfectBikeDashboard.getCombinedRentals();
+      if (PerfectBikeCalc.hasAvailabilityConflict(start.toISOString(), end.toISOString(), existing)) {
+        errorEl.textContent = "Those dates overlap an existing rental. Choose a different start date or duration.";
+        return;
+      }
+
+      const record = {
+        id: `PB-${Date.now().toString().slice(-6)}`,
+        sample: false,
+        bicycleId: modelSelect.value,
+        hubId: hubSelect.value,
+        start: start.toISOString(),
+        end: end.toISOString(),
+        days,
+        status: "upcoming",
+      };
+      const personal = PerfectBikeStorage.getPersonalRentals();
+      personal.push(record);
+      PerfectBikeStorage.setPersonalRentals(personal);
+      successEl.textContent = `Booking ${record.id} confirmed for ${days} day(s). No payment was processed. View it in History.`;
+    } else {
+      if (!tourDateInput.value) {
+        errorEl.textContent = "Please choose a tour date.";
+        return;
+      }
+      const record = {
+        id: `TOUR-${Date.now().toString().slice(-6)}`,
+        sample: false,
+        tourId: tourSelect.value,
+        start: new Date(tourDateInput.value + "T08:45:00Z").toISOString(),
+        riders: Math.max(1, Math.min(6, parseInt(ridersInput.value, 10) || 1)),
+        status: "upcoming",
+      };
+      const personal = PerfectBikeStorage.getPersonalRentals();
+      personal.push(record);
+      PerfectBikeStorage.setPersonalRentals(personal);
+      successEl.textContent = `Tour booking ${record.id} confirmed. No payment was processed. View it in History.`;
+    }
+
+    successEl.style.display = "block";
+  });
+});
+</script>
+</body>
+</html>

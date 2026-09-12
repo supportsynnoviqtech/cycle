@@ -1,0 +1,94 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The Wayfarer City Bicycle">
+  <defs>
+    <linearGradient id="sky-city" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#EAF0FE"/>
+      <stop offset="100%" stop-color="#D5E2FC"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#1F3F8C" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  
+  <!-- Background Card -->
+  <rect width="800" height="500" rx="16" fill="url(#sky-city)"/>
+  
+  <!-- Subtle City Skyline Silhouettes -->
+  <path d="M 50 360 L 50 280 L 90 280 L 90 230 L 140 230 L 140 360 Z" fill="#C4D7FA" opacity="0.5"/>
+  <path d="M 160 360 L 160 200 L 210 200 L 230 170 L 250 200 L 250 360 Z" fill="#C4D7FA" opacity="0.4"/>
+  <path d="M 600 360 L 600 220 L 670 220 L 670 360 Z" fill="#C4D7FA" opacity="0.4"/>
+  
+  <!-- Ground Line -->
+  <path d="M 0 360 L 800 360" stroke="#B0C8F8" stroke-width="4" stroke-dasharray="12 8"/>
+  <path d="M 0 364 L 800 364" stroke="#DCD7CC" stroke-width="2"/>
+  
+  <!-- Bicycle Shadow -->
+  <ellipse cx="240" cy="364" rx="110" ry="12" fill="#1F3F8C" opacity="0.12"/>
+  <ellipse cx="560" cy="364" rx="110" ry="12" fill="#1F3F8C" opacity="0.12"/>
+  
+  <!-- FRONT WHEEL -->
+  <g filter="url(#shadow)">
+    <circle cx="560" cy="260" r="90" fill="none" stroke="#2C3345" stroke-width="12"/>
+    <circle cx="560" cy="260" r="80" fill="none" stroke="#E2E8F0" stroke-width="4"/>
+    <g stroke="#94A3B8" stroke-width="1.5">
+      <line x1="560" y1="170" x2="560" y2="350"/>
+      <line x1="470" y1="260" x2="650" y2="260"/>
+      <line x1="496" y1="196" x2="624" y2="324"/>
+      <line x1="496" y1="324" x2="624" y2="196"/>
+      <line x1="515" y1="182" x2="605" y2="338"/>
+      <line x1="515" y1="338" x2="605" y2="182"/>
+    </g>
+    <circle cx="560" cy="260" r="14" fill="#1F3F8C"/>
+    <path d="M 475 230 A 92 92 0 0 1 645 230" fill="none" stroke="#1F3F8C" stroke-width="6"/>
+  </g>
+  
+  <!-- REAR WHEEL -->
+  <g filter="url(#shadow)">
+    <circle cx="240" cy="260" r="90" fill="none" stroke="#2C3345" stroke-width="12"/>
+    <circle cx="240" cy="260" r="80" fill="none" stroke="#E2E8F0" stroke-width="4"/>
+    <g stroke="#94A3B8" stroke-width="1.5">
+      <line x1="240" y1="170" x2="240" y2="350"/>
+      <line x1="150" y1="260" x2="330" y2="260"/>
+      <line x1="176" y1="196" x2="304" y2="324"/>
+      <line x1="176" y1="324" x2="304" y2="196"/>
+      <line x1="195" y1="182" x2="285" y2="338"/>
+      <line x1="195" y1="338" x2="285" y2="182"/>
+    </g>
+    <circle cx="240" cy="260" r="14" fill="#1F3F8C"/>
+    <circle cx="370" cy="260" r="24" fill="none" stroke="#64748B" stroke-width="6"/>
+    <path d="M 240 260 L 370 240 L 370 280 Z" fill="#64748B" opacity="0.3"/>
+    <path d="M 155 230 A 92 92 0 0 1 320 215" fill="none" stroke="#1F3F8C" stroke-width="6"/>
+  </g>
+  
+  <!-- CITY FRAME -->
+  <g fill="none" stroke="#1F3F8C" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" filter="url(#shadow)">
+    <path d="M 240 260 L 340 140"/>
+    <path d="M 240 260 L 370 260"/>
+    <path d="M 340 140 L 370 260"/>
+    <path d="M 340 140 C 370 240, 430 280, 510 160"/>
+    <path d="M 340 170 C 370 230, 420 250, 500 180"/>
+    <path d="M 560 260 L 510 160 L 490 100"/>
+    <path d="M 490 100 L 450 110 L 440 120"/>
+  </g>
+
+  <!-- Leather Saddle -->
+  <path d="M 305 135 C 310 125, 360 125, 365 140 Z" fill="#8C531F" filter="url(#shadow)"/>
+  <rect x="335" y="140" width="10" height="25" fill="#64748B"/>
+  
+  <!-- Front Basket -->
+  <g filter="url(#shadow)">
+    <rect x="520" y="110" width="70" height="50" rx="8" fill="#E8A93B" stroke="#B8791A" stroke-width="3"/>
+    <path d="M 520 125 H 590 M 520 140 H 590 M 540 110 V 160 M 570 110 V 160" stroke="#FFFFFF" stroke-width="2" opacity="0.6"/>
+    <circle cx="540" cy="100" r="10" fill="#E15B4B"/>
+    <circle cx="560" cy="95" r="12" fill="#FFFFFF"/>
+    <circle cx="575" cy="102" r="9" fill="#E8A93B"/>
+  </g>
+
+  <!-- Front Headlight -->
+  <circle cx="525" cy="165" r="10" fill="#FDE047" stroke="#1F3F8C" stroke-width="3"/>
+
+  <!-- Inset Pill Badge Overlay (Inset x=50, y=30 to avoid cropping) -->
+  <g filter="url(#shadow)">
+    <rect x="40" y="30" width="260" height="34" rx="17" fill="#1F3F8C"/>
+    <text x="170" y="52" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" letter-spacing="0.5" text-anchor="middle">CLASSIC ? STEP-THROUGH</text>
+  </g>
+</svg>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Settings &amp; Controls &ndash; Dashboard &mdash; PerfectBike</title>
+<meta name="description" content="Settings &amp; Controls &ndash; PerfectBike Dashboard.">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/layout.css">
+<script src="js/storage.js"></script>
+<script src="js/theme.js"></script>
+</head>
+<body class="dash-body">
+<div class="dash-shell">
+  <div id="dash-sidebar-mount"></div>
+  <main class="dash-main" id="main">
+
+    <header class="dash-header">
+      <div>
+        <button type="button" class="icon-control dash-mobile-toggle js-dash-mobile-open" aria-label="Open sidebar menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+        <div>
+          <h1 style="font-size:1.5rem;margin:0;">Settings &amp; Controls</h1>
+          <p class="text-muted" style="margin-top:2px;font-size:0.85rem;">Theme, direction, motion, sample fixture, and data reset.</p>
+        </div>
+      </div>
+    </header>
+
+    <div class="dash-content">
+
+      <section class="section-tight" aria-labelledby="set-theme-h">
+        <div class="card">
+          <h3 id="set-theme-h">Visual Theme Mode</h3>
+          <p class="text-muted">Currently: <strong id="set-theme-status">Light</strong>.</p>
+          <div style="display:flex;gap:12px;margin-top:12px;">
+            <button class="btn btn-secondary js-theme-toggle" type="button">Toggle Light / Dark Theme</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-tight" aria-labelledby="set-dir-h">
+        <div class="card">
+          <h3 id="set-dir-h">Text Direction Layout</h3>
+          <p class="text-muted">Currently: <strong id="set-dir-status">LTR (Left-to-Right)</strong>.</p>
+          <div style="display:flex;gap:12px;margin-top:12px;">
+            <button class="btn btn-secondary js-dir-toggle" type="button">Toggle LTR / RTL Layout</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-tight" aria-labelledby="set-motion-h">
+        <div class="card">
+          <h3 id="set-motion-h">Motion &amp; Reduced Motion</h3>
+          <p class="text-muted">Respects your system&rsquo;s <code>prefers-reduced-motion</code> setting. Currently: <strong id="set-motion-status">Motion enabled</strong>.</p>
+          <div style="display:flex;gap:12px;margin-top:12px;">
+            <button class="btn btn-secondary" type="button" id="js-toggle-motion">Toggle Reduced Motion</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-tight" aria-labelledby="set-fixture-h">
+        <div class="card">
+          <h3 id="set-fixture-h">Sample Fixture Control</h3>
+          <p class="text-muted">Load or remove the 5 pre-seeded demonstration rentals (1 active, 2 upcoming, 2 completed). Currently: <strong id="set-fixture-status">Loaded</strong>.</p>
+          <div style="display:flex;gap:12px;margin-top:12px;flex-wrap:wrap;">
+            <button class="btn btn-primary btn-sm" type="button" id="js-load-samples">Load Sample Fixture</button>
+            <button class="btn btn-secondary btn-sm" type="button" id="js-remove-samples">Remove Sample Fixture</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-tight" aria-labelledby="set-signout-h">
+        <div class="card">
+          <h3 id="set-signout-h">Sign Out</h3>
+          <p class="text-muted">Clears your preferred name and returns to login while <strong>preserving</strong> your saved planner records.</p>
+          <button class="btn btn-secondary btn-sm" type="button" id="js-settings-signout">Sign Out</button>
+        </div>
+      </section>
+
+      <section class="section-tight" aria-labelledby="set-reset-h">
+        <div class="card" style="border-color:var(--color-danger);">
+          <h3 id="set-reset-h" style="color:var(--color-danger);">Full Settings Reset</h3>
+          <p class="text-muted">Clears preferred name, personal plans, notifications, and sample-loaded state. Does <strong>NOT</strong> re-seed samples automatically.</p>
+          <button class="btn btn-secondary btn-sm" type="button" id="js-settings-full-reset" style="color:var(--color-danger);border-color:var(--color-danger);">Execute Full Reset</button>
+        </div>
+      </section>
+
+      <section class="section-tight" aria-labelledby="set-storage-summary">
+        <div class="section-intro" style="text-align:start;margin-bottom:16px;">
+          <p class="eyebrow">Storage Audit</p>
+          <h2 id="set-storage-summary">localStorage keys used</h2>
+        </div>
+        <div class="card"><p>Keys: <code>perfectbike.preferredName</code>, <code>perfectbike.theme</code>, <code>perfectbike.direction</code>, <code>perfectbike.reduceMotion</code>, <code>perfectbike.personalRentals</code>, <code>perfectbike.samplesLoaded</code>, <code>perfectbike.notifications</code>.</p></div>
+      </section>
+
+      <section class="section-tight" aria-labelledby="set-verif-h">
+        <div class="section-intro" style="text-align:start;margin-bottom:16px;">
+          <p class="eyebrow">QA / QC Control</p>
+          <h2 id="set-verif-h">Verification matrix compliance</h2>
+        </div>
+        <div class="card"><p>Full evidence is recorded in <code>03-Synnoviq-Final-QA-QC-Checklist.docx</code>.</p></div>
+      </section>
+
+      <section class="section-tight" aria-labelledby="sett-diag-h">
+        <div class="section-intro" style="text-align:start;margin-bottom:16px;">
+          <p class="eyebrow">Diagnostics</p>
+          <h2 id="sett-diag-h">System storage &amp; cache inspection</h2>
+        </div>
+        <div class="card"><p class="text-muted">Use the controls above to inspect current state or trigger a full state reset, returning PerfectBike to its factory demonstration baseline.</p></div>
+      </section>
+
+      <section class="section-tight" aria-labelledby="set-foot-card">
+        <h2 class="sr-only" id="set-foot-card">Footer note</h2>
+        <div class="card" style="text-align:center;"><p class="text-muted">PerfectBike Dashboard &ndash; Settings &amp; Application Controls</p></div>
+      </section>
+
+    </div>
+  </main>
+</div>
+<script src="js/data.js"></script>
+<script src="js/calculations.js"></script>
+<script src="js/dashboard.js"></script>
+<script src="assets/gsap/gsap.min.js"></script>
+<script src="assets/gsap/ScrollTrigger.min.js"></script>
+<script src="js/motion.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  PerfectBikeDashboard.mountSidebar("settings");
+
+  const themeStatus = document.getElementById("set-theme-status");
+  const dirStatus = document.getElementById("set-dir-status");
+  const motionStatus = document.getElementById("set-motion-status");
+  const fixtureStatus = document.getElementById("set-fixture-status");
+
+  function refreshStatus() {
+    themeStatus.textContent = PerfectBikeTheme.getTheme() === "dark" ? "Dark" : "Light";
+    dirStatus.textContent = PerfectBikeTheme.getDirection() === "rtl" ? "RTL (Right-to-Left)" : "LTR (Left-to-Right)";
+    motionStatus.textContent = PerfectBikeStorage.get(PerfectBikeStorage.KEYS.motion, false) ? "Reduced motion" : "Motion enabled";
+    fixtureStatus.textContent = PerfectBikeStorage.areSamplesLoaded() ? "Loaded" : "Not loaded";
+  }
+
+  document.querySelectorAll(".js-theme-toggle, .js-dir-toggle").forEach((btn) =>
+    btn.addEventListener("click", () => setTimeout(refreshStatus, 0))
+  );
+
+  document.getElementById("js-toggle-motion").addEventListener("click", () => {
+    const current = PerfectBikeStorage.get(PerfectBikeStorage.KEYS.motion, false);
+    PerfectBikeStorage.set(PerfectBikeStorage.KEYS.motion, !current);
+    refreshStatus();
+  });
+
+  document.getElementById("js-load-samples").addEventListener("click", () => {
+    PerfectBikeStorage.setSamplesLoaded(true);
+    refreshStatus();
+  });
+
+  document.getElementById("js-remove-samples").addEventListener("click", () => {
+    PerfectBikeStorage.setSamplesLoaded(false);
+    refreshStatus();
+  });
+
+  document.getElementById("js-settings-signout").addEventListener("click", () => {
+    PerfectBikeStorage.signOut();
+    window.location.href = "login.html";
+  });
+
+  document.getElementById("js-settings-full-reset").addEventListener("click", () => {
+    if (window.confirm("This clears your preferred name, personal plans, notifications, and sample-loaded state. Continue?")) {
+      PerfectBikeStorage.fullReset();
+      window.location.href = "login.html";
+    }
+  });
+
+  refreshStatus();
+});
+</script>
+</body>
+</html>

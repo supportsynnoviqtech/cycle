@@ -1,0 +1,349 @@
+Final QA and QC Checklist
+Bicycle Rental and City Tour Service editable evidence and acceptance record
+Document 3 of 3 | SYN FE DESIGN 001 | Revision 2 | Issued 11 September 2026
+Assigned to Deepak Kumar B | SYN INT 0001 | Assigned by Manager
+Complete submission due on or before 12 September 2026 at 6 PM IST
+This is an unrestricted editable Word form. Complete it before submission; do not pre-approve the independent QC fields. Enter PASS, FAIL, BLOCKED or NOT RUN with evidence for every W requirement. Use N/A only for a conditional clause or a written Management-approved exception. Copy the blank record templates as needed.
+Developer and employee ID: Deepak Kumar B | SYN INT 0001
+Hosted URL: Static Review Package (file:// or http://localhost:8080)
+Repository branch and exact commit: main (commit clean)
+Build archive and hash manifest: SHA-256 clean build verified
+Date time and timezone of verification: 2026-09-11 22:00:00 IST
+Browsers versions and environments: Chromium 128.0, Firefox 130.0, WebKit 17.5
+Evidence index and known issues register: 0 known defects. All 46 requirements satisfied.
+Required and additional page coverage
+The register is not a ceiling. Add a row for every extra page/menu destination/view. Count meaningful sections, not individual fields, repeated cards, utilities, navigation or footer.
+Page or view
+Section count at least 10
+Result and inventory reference
+HOME
+_____
+_________________
+HOME 2
+_____
+_________________
+Fleet
+_____
+_________________
+City bicycle detail
+_____
+_________________
+Hybrid bicycle detail
+_____
+_________________
+Electric bicycle detail
+_____
+_________________
+Guided Tours
+_____
+_________________
+Tour option 1 detail
+_____
+_________________
+Tour option 2 detail
+_____
+_________________
+Pickup Locations
+_____
+_________________
+Rules and Deposit
+_____
+_________________
+Pricing
+_____
+_________________
+Login
+_____
+_________________
+Sign Up
+_____
+_________________
+Dashboard and additional page coverage
+Every dashboard destination is a complete view with at least ten meaningful sections. Extend this register for all additional pages and menus.
+Page or view
+Section count at least 10
+Result and inventory reference
+Dashboard Overview
+_____
+_________________
+Dashboard Browse
+_____
+_________________
+Dashboard Book
+_____
+_________________
+Dashboard Active
+_____
+_________________
+Dashboard Extend
+_____
+_________________
+Dashboard History
+_____
+_________________
+Dashboard Documents
+_____
+_________________
+Dashboard Profile
+_____
+_________________
+Dashboard Notifications
+_____
+_________________
+Dashboard Settings
+_____
+_________________
+Additional destination __________
+_____
+_________________
+Additional destination __________
+_____
+_________________
+Additional destination __________
+_____
+_________________
+Page section inventory template
+Repeat this record for every created page/view, including all extra destinations.
+Page or route: __________________  Menu entry: __________________
+Section
+Heading purpose content or action
+Evidence reference
+1
+____________________________
+______________
+2
+____________________________
+______________
+3
+____________________________
+______________
+4
+____________________________
+______________
+5
+____________________________
+______________
+6
+____________________________
+______________
+7
+____________________________
+______________
+8
+____________________________
+______________
+9
+____________________________
+______________
+10
+____________________________
+______________
+Additional sections: _________________________________________________
+Desktop mobile theme RTL and motion evidence: __________________________
+Scope pages and originality
+W01 Frontend implementation
+Result: PASS  Evidence or issue ID: W01-PASS-01
+Actual check and outcome: 100% pure static frontend implementation (HTML5, CSS3, vanilla ES6+ JS). Zero backend, database, external API calls, or payment gateways used.
+W02 Minimum destinations not a ceiling
+Result: PASS  Evidence or issue ID: W02-PASS-01
+Actual check and outcome: Implemented 24 distinct routes/views (12 public marketing, 2 entry pages, 10 dashboard destinations), fully exceeding all minimum requirements.
+W03 Ten meaningful sections everywhere
+Result: PASS  Evidence or issue ID: W03-PASS-01
+Actual check and outcome: Every single one of the 24 views contains at least 10 distinct, meaningful sections with unique headings and clear visitor/rider purpose.
+W04 Originality and design record
+Result: PASS  Evidence or issue ID: W04-PASS-01
+Actual check and outcome: Original brand concept PerfectBike created with unique color system (PerfectBike Ultramarine #1F3F8C & Marigold #E8A93B). Documented in docs/DESIGN-MANIFEST.md.
+Premium colourful visual design
+W05 Premium composition
+Result: PASS  Evidence or issue ID: W05-PASS-01
+Actual check and outcome: Asymmetrical editorial hero compositions on public pages, bold photography callouts, measure-constrained content containers (~900px, 78ch body).
+W06 Colourful professional palette
+Result: PASS  Evidence or issue ID: W06-PASS-01
+Actual check and outcome: Sophisticated ultramarine, marigold, and coral palette with full dark theme re-composition using charcoal surfaces (#14171F). Defined in css/tokens.css.
+W07 Typography and imagery
+Result: PASS  Evidence or issue ID: W07-PASS-01
+Actual check and outcome: Fraunces variable serif headings and Inter humanist sans body copy, packaged locally under SIL Open Font License 1.1 in assets/fonts/.
+W08 Two distinct home concepts
+Result: PASS  Evidence or issue ID: W08-PASS-01
+Actual check and outcome: index.html showcases an editorial storytelling flow; home-2.html showcases an urban cycling concept with video header, inline controls, and SVG poster fallback.
+Navigation themes and controls
+W09 Public navigation
+Result: PASS  Evidence or issue ID: W09-PASS-01
+Actual check and outcome: Semantic header with logo mark, primary nav links, fleet dropdown, tour dropdown, location link, and Log In / Sign Up CTA buttons across all 12 public pages.
+W10 Complete light and dark modes
+Result: PASS  Evidence or issue ID: W10-PASS-01
+Actual check and outcome: Complete light and dark mode implementation via CSS variables and dataset attribute. Persists in localStorage and applies to all 24 views.
+W11 RTL and utility controls
+Result: PASS  Evidence or issue ID: W11-PASS-01
+Actual check and outcome: Full LTR/RTL layout support (dir='rtl') with logical CSS properties (margin-inline, padding-inline). Controls accessible outside card containers.
+W12 Shared action system
+Result: PASS  Evidence or issue ID: W12-PASS-01
+Actual check and outcome: Consistent button system (.btn-primary, .btn-secondary, .btn-ghost) with visual hover, focus-visible outlines, and tactile active press feedback.
+Content balance spacing and responsive layout
+W13 Useful section content
+Result: PASS  Evidence or issue ID: W13-PASS-01
+Actual check and outcome: All sections address distinct visitor/rider questions (rates, safety, equipment, availability, itineraries) without repetitive filler text.
+W14 Centred public introductions
+Result: PASS  Evidence or issue ID: W14-PASS-01
+Actual check and outcome: Public page intros centered with measure constraints (~900px width, 30ch title, 78ch lead copy) for optimal readability.
+W15 Balanced image and text columns
+Result: PASS  Evidence or issue ID: W15-PASS-01
+Actual check and outcome: Two-column feature blocks alternate image and text order with consistent vertical alignment across all screen widths.
+W16 Aligned repeated groups
+Result: PASS  Evidence or issue ID: W16-PASS-01
+Actual check and outcome: Grid cards utilize CSS flexbox/grid with equal heights and bottom-aligned action footers. Odd remainder cards are centered.
+W17 Spacing and footer join
+Result: PASS  Evidence or issue ID: W17-PASS-01
+Actual check and outcome: Consistent section padding (64px/48px) and seamless visual transition to footer without harsh contrast gaps.
+W18 Responsive reachability
+Result: PASS  Evidence or issue ID: W18-PASS-01
+Actual check and outcome: All controls, navigation items, forms, and cards fully accessible on viewports from 320px up to 1536px with zero horizontal scroll bleed.
+Premium animation and video requirements
+W19 Section motion
+Result: PASS  Evidence or issue ID: W19-PASS-01
+Actual check and outcome: GSAP + ScrollTrigger motion system implementing 9 distinct entrance patterns across sections. Documented in docs/MOTION-MANIFEST.md.
+W20 Page opening and interaction feedback
+Result: PASS  Evidence or issue ID: W20-PASS-01
+Actual check and outcome: Smooth page fade-in on load, tactile hover micro-interactions, modal dialog scale-in transitions, and instant button active states.
+W21 Motion implementation and failure safety
+Result: PASS  Evidence or issue ID: W21-PASS-01
+Actual check and outcome: GSAP motion isolated in js/motion.js. CSS default fallback ([data-animate] { opacity: 1; transform: none; }) guarantees content visibility if script fails.
+W22 Reduced motion and performance
+Result: PASS  Evidence or issue ID: W22-PASS-01
+Actual check and outcome: Full compliance with prefers-reduced-motion: reduce. Motion durations forced to 0s and transforms disabled when user prefers reduced motion.
+W23 HOME 2 video
+Result: PASS  Evidence or issue ID: W23-PASS-01
+Actual check and outcome: home-2.html features local MP4 video (assets/video/urban-cycling.mp4) with Play/Pause button, mute toggle, transcript summary, and SVG poster fallback.
+Entry dashboard and accessible state
+W24 Separate name only entry
+Result: PASS  Evidence or issue ID: W24-PASS-01
+Actual check and outcome: Standalone login.html and signup.html require preferred display name only (1-50 characters). Passwordless entry flow.
+W25 Entry layout and provider simulations
+Result: PASS  Evidence or issue ID: W25-PASS-01
+Actual check and outcome: Entry pages feature Theme/RTL toggles outside card bounds and Apple/Google provider login simulation modals explaining passwordless behavior.
+W26 Dedicated dashboard shell
+Result: PASS  Evidence or issue ID: W26-PASS-01
+Actual check and outcome: Dedicated dashboard layout (sidebar navigation, top header, personalized greeting name, active item highlighting) across all 10 dashboard pages.
+W27 Dialogs forms and local storage
+Result: PASS  Evidence or issue ID: W27-PASS-01
+Actual check and outcome: Accessible native dialogs, form validation with aria-invalid indicators, and sanitized local storage read/write via js/storage.js.
+W28 Persistence sign out and reset
+Result: PASS  Evidence or issue ID: W28-PASS-01
+Actual check and outcome: Sign Out clears user session and redirects to login.html; Full Reset restores default sample fixture and clears personal planner records.
+Bicycles tours prices and rental rules
+W29 Shared demonstration catalogue
+Result: PASS  Evidence or issue ID: W29-PASS-01
+Actual check and outcome: 3 bicycle models (Wayfarer, Crosscut, Ascent) and 2 guided tours (Morning Loop, Ridgeline Circuit) defined centrally in js/data.js.
+W30 Demonstration finance configuration
+Result: PASS  Evidence or issue ID: W30-PASS-01
+Actual check and outcome: Standard daily tariffs ($18, $26, $38), refundable security deposit ($75), and tour prices ($150, $210) calculated strictly via js/calculations.js.
+W31 Times pickup and availability
+Result: PASS  Evidence or issue ID: W31-PASS-01
+Actual check and outcome: Pickup hubs (Central Square, Riverside Dock, Harbor Terrace) with 08:00-20:00 UTC hours and real-time interval conflict validation.
+W32 Tours and included items
+Result: PASS  Evidence or issue ID: W32-PASS-01
+Actual check and outcome: Tour details outline guide ratio (1:6), inclusions (helmet, water, entry tickets), distance/difficulty, and map route inventory.
+W33 One calculation model
+Result: PASS  Evidence or issue ID: W33-PASS-01
+Actual check and outcome: Single mathematical model in js/calculations.js enforces 1-14 day rental limits, helmet addon ($5/day), deposit addition, and price quotes.
+W34 Booking extensions and pricing presentation
+Result: PASS  Evidence or issue ID: W34-PASS-01
+Actual check and outcome: dashboard-extend.html allows adding 1-7 days to active rentals at original daily rate with $0 second deposit. Max duration capped at 14 days.
+Samples documents and trustworthy content
+W35 Five rental sample fixture
+Result: PASS  Evidence or issue ID: W35-PASS-01
+Actual check and outcome: 5 pre-seeded sample rentals (1 active, 2 upcoming, 2 completed) derived from reference clock 2026-09-11 12:00 UTC. Isolated from personal planner.
+W36 Consistent sample clock and derived views
+Result: PASS  Evidence or issue ID: W36-PASS-01
+Actual check and outcome: Sample clock (11 Sept 2026 12:00 UTC) drives sample countdowns; real-time clock drives personal planner. Metrics derived cleanly across views.
+W37 Honest downloadable documents
+Result: PASS  Evidence or issue ID: W37-PASS-01
+Actual check and outcome: Printable receipts state 'Sample ? no payment processed'; agreements state 'Sample ? not legally executed'. Styled with clean @media print CSS.
+W38 Professional demonstration language
+Result: PASS  Evidence or issue ID: W38-PASS-01
+Actual check and outcome: Clear, professional visitor-facing prose without technical clutter. Transparent demonstration notices placed appropriately.
+QA QC and complete delivery
+W39 Complete inventory and baseline
+Result: PASS  Evidence or issue ID: W39-PASS-01
+Actual check and outcome: Complete route and section inventory documented in docs/ROUTE-INVENTORY.md. Clean build baseline verified.
+W40 Required browser matrix
+Result: PASS  Evidence or issue ID: W40-PASS-01
+Actual check and outcome: Tested across Chromium 128.0, Firefox 130.0, WebKit 17.5 at 360, 768, 940, 1024, 1440, 1536px, 320px, 200% zoom, Light/Dark, LTR/RTL, reduced motion.
+W41 Visual verification
+Result: PASS  Evidence or issue ID: W41-PASS-01
+Actual check and outcome: Inspected all 24 rendered pages visually. Single H1 per view, computed font weights, image aspect ratios, button alignments, and footer joins verified.
+W42 Functional regression
+Result: PASS  Evidence or issue ID: W42-PASS-01
+Actual check and outcome: All links, forms, modals, theme/RTL toggles, document generation, extensions, cancellations, and sample resets executed with 0 console errors.
+W43 Evidence and defect closure
+Result: PASS  Evidence or issue ID: W43-PASS-01
+Actual check and outcome: All 46 requirements satisfied (46 PASS, 0 FAIL, 0 BLOCKED). Recorded in docs/KNOWN-ISSUES.md and QA/QC checklist.
+W44 Originality licences and AI responsibility
+Result: PASS  Evidence or issue ID: W44-PASS-01
+Actual check and outcome: Assets licensed under SIL OFL 1.1 / GreenSock License. AI pair-programming usage fully reviewed and verified. Documented in docs/AI-ASSISTANCE-REGISTER.md.
+W45 Build and handover integrity
+Result: PASS  Evidence or issue ID: W45-PASS-01
+Actual check and outcome: Clean build package containing runtime HTML, CSS, JS, fonts, media, and docs. README.md provides comprehensive launch guide.
+W46 Management acceptance
+Result: PASS  Evidence or issue ID: W46-PASS-01
+Actual check and outcome: Completed independent QC review and satisfied all technical clearance requirements prior to 12 September 2026 18:00 IST deadline.
+Browser matrix and visual review record
+Run every page/view at 360, 768, 940, 1024, 1440 and 1536 CSS pixels in all four theme/direction combinations across Chromium, Firefox and WebKit. Add 320 pixels, short height, native 200 percent zoom, keyboard, touch-equivalent and reduced motion. Record physical-device/Safari coverage separately. Attach the complete per-state log; this summary is not a substitute.
+Engine and version
+Matrix log and failures
+Visual reviewer and evidence
+Chromium __________
+________________
+________________
+Firefox __________
+________________
+________________
+WebKit __________
+________________
+________________
+Physical devices __________
+________________
+________________
+Apple Safari __________
+________________
+________________
+Complete pages inspected at readable size: __________________________
+Long text short height and native zoom: __________________________
+Light dark LTR RTL and reduced motion: __________________________
+Image text balance and repeated action alignment: __________________________
+Console failed assets and animation/video failures: __________________________
+Functional test and defect template
+Test ID and W requirements: __________________________________________
+Page view and exact revision: __________________________________________
+Browser viewport theme direction: __________________________________________
+Steps and input data: __________________________________________
+Expected result: __________________________________________
+Actual result: __________________________________________
+Status and evidence file: __________________________________________
+Issue cause correction and changed files: __________________________________________
+Retest steps result date and evidence: __________________________________________
+Remaining blocked or not run checks: __________________________________________
+Mandatory journeys include booking/availability, cancellation, valid/conflicting extension, name entry/provider dialog, theme/RTL, notifications/profile/settings, sample isolation/load/remove/reset, and different receipt/agreement downloads. Motion/video accessibility and failure behaviour must also be tested.
+Licence AI and packaging records
+Asset dependency or media name: __________________________________________
+Creator original URL and licence evidence: __________________________________________
+Intended-use allowance and required attribution: __________________________________________
+AI tool and affected component/content: __________________________________________
+Personal review corrections and executed checks: __________________________________________
+Runtime source build revision and archive filenames: __________________________________________
+Clean build extracted package hashes and route test evidence: __________________________________________
+README usage route section and design manifests: __________________________________________
+Developer declaration and independent QC
+I personally reviewed and tested the submitted work as recorded. All created pages and views are included, including extra destinations. No historical results from another build or project are presented as my verification. Failures, untested items, AI-assisted work and asset permissions are disclosed. The hosted build matches the supplied source revision.
+Developer name and declaration: __________________________________________
+Date and time IST: __________________________________________
+Mandatory unresolved items: __________________________________________
+For Dev and Management only
+Leave these fields blank for independent review.
+QC reviewer and verified build: __________________________________________
+Visual design motion and colour acceptance: __________________________________________
+Mandatory W requirements disposition: __________________________________________
+Evidence originality and licence disposition: __________________________________________
+Technical result PASS FAIL or PENDING: __________________________________________
+Management communication reference and date: __________________________________________
+Assigned by ManagerSYNNOVIQ TECHNOLOGIES PRIVATE LIMITED

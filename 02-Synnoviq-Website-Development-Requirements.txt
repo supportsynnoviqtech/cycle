@@ -1,0 +1,111 @@
+Website Development Requirements
+Bicycle Rental and City Tour Service mandatory development standard
+Document 2 of 3 | SYN FE DESIGN 001 | Revision 2 | Issued 11 September 2026
+Assigned to Deepak Kumar B | SYN INT 0001 | Assigned by Manager
+Complete submission due on or before 12 September 2026 at 6 PM IST
+Every numbered item below is a requirement for this assessment. This is the expanded final standard, including premium redesign, content/spacing corrections, motion/video, local behaviour and complete verification controls. Historical implementation claims, pass counts and third-party identities are not carried forward as evidence of Deepak's work.
+The minimum pages are not limited to the named destinations. Additional useful pages and menus are permitted; every created page/view must be complete, contain ten meaningful sections and enter the QA matrix. The developer must not use the earlier lower section counts or password-form guidance.
+How to use this standard
+Map each W identifier to implementation and test evidence in Document 3. All numbered items are mandatory unless a specific clause explicitly makes a feature conditional. Only Management may approve an exception. Colour and brand choices must be original and professionally coordinated; no external organisation names or prior project branding form part of the required identity.
+Scope pages and originality
+W01 Frontend implementation
+Build semantic HTML, CSS and vanilla JavaScript with local runtime assets and a documented static build. Do not add a backend, database, real authentication, payment processing, provider connection or business API. A hosted static review URL is required by this assignment; it is not a production launch.
+W02 Minimum destinations not a ceiling
+Implement the required destinations in the allocation, including bicycle/tour detail pages and all ten dashboard destinations. This list is required but not limited to: add useful pages, menus, detail views or supporting content where they improve the experience. Keep Dashboard last in the public navigation. Every added destination must work, remain within frontend scope and be included in the inventory and QA.
+W03 Ten meaningful sections everywhere
+Provide at least ten distinct meaningful sections on every created page and dashboard view. This replaces the lower historical section minimums. A hero or complete form counts once; shared navigation, footer, utilities, single fields/buttons, empty spacers and individual cards in a group do not count separately. Record heading, purpose, content and evidence for each section.
+W04 Originality and design record
+Create original copy and a distinct visual composition. Maintain a design manifest covering palette, typography, hero, section order, imagery, cards and motion. Study references for principles only; never copy code/assets, branding, claims, testimonials, figures or guarantees. Do not claim comparison or uniqueness against references that were not actually reviewed.
+Premium colourful visual design
+W05 Premium composition
+Deliver a deliberate premium design, not a basic template, repeated text grids or a recolour. Design hero scale, photography, editorial hierarchy, section order, cards, backgrounds, whitespace and footer as a coherent experience. Review the entire page rather than only the first screen.
+W06 Colourful professional palette
+Use a colourful but professional palette anchored by a primary and secondary brand colour, supported by coherent neutrals and controlled complementary accents. Use imagery, illustrations, gradients and purposeful section treatments for richness without a random rainbow of competing colours. Document colour roles and preserve contrast and theme consistency. This direction replaces fixed project-specific colour values.
+W07 Typography and imagery
+Use locally packaged licensed fonts with actual supported weights. Headings must compute to weight 600; body copy uses a consistent weight 400 by default. Use a clear responsive size scale. Use relevant high-quality local imagery with correct proportions, useful alt text and no distortion or damaging crops.
+W08 Two distinct home concepts
+Create HOME and HOME 2 with substantially different content hierarchy and composition in one design system. HOME must combine a strong full-width city/cycling hero, a planning control, curated bicycles, photography, tour features, process, pickup guide and useful closing content. HOME 2 must use an editorial cycling-day concept with video, a morning/day/evening narrative, features, model choices, tour comparison and preparation/planning content. Add distinct useful sections to reach ten; a title plus video is one section.
+Navigation themes and controls
+W09 Public navigation
+Use HOME linked to index.html and HOME 2 linked to home-2.html. Keep logical active-state navigation and Dashboard as the last public link. Use at most two header CTAs, one Primary and one Secondary, with utilities separate. Every menu and direct destination must work with keyboard and touch.
+W10 Complete light and dark modes
+Apply the selected theme to surfaces, text, icons, borders, cards, forms, menus, tables, imagery treatment and interactive states. A background-only switch is insufficient. Persist the preference harmlessly and verify every page in both themes.
+W11 RTL and utility controls
+Implement actual LTR/RTL behaviour with appropriate layout, text alignment and directional icons. Theme and direction buttons require equal dimensions, aligned icon bounds, accessible names and visible focus. Use 44-pixel utility controls. Theme uses a sun and Settings a distinct cog; both must remain clearly distinguishable.
+W12 Shared action system
+Use consistent primary/secondary styles, typography, shape, size, padding, hover, focus, pressed and disabled states. Within comparable sibling groups, keep actions equally sized and aligned despite differing labels/status. Every applicable sibling must offer a useful working action. Mobile operation must not depend on hover.
+Content balance spacing and responsive layout
+W13 Useful section content
+Every substantive section must answer a distinct visitor question and help someone choose, prepare or act. Use natural professional English, original complete sentences and meaningful differences between models/tours/pages. Operational facts may repeat consistently; filler, duplicated editorial paragraphs and renamed sections do not satisfy depth.
+W14 Centred public introductions
+Comparable full-width public sections must use centred eyebrow, heading, supporting introduction and related action, with readable line lengths and consistent gaps before grids. Do not leave an unused second column next to a narrow introduction. Use responsive maximum measures around 900 pixels for introductions, 30ch for headings and 78ch for body copy; keep functional forms/card bodies/dashboard text left-aligned when useful.
+W15 Balanced image and text columns
+Top-align intentional desktop image/text columns and supply useful supporting content so meaningful text ends near the image lower edge. At 1440 and 1536 pixels, inspect top alignment within 2 pixels and end difference within 64 pixels as review checks. Never manufacture balance with filler, fixed paragraph heights, invisible blocks, stretched line height or damaging image crops. Stack narrow direct image/text compositions at 1100 pixels and below.
+W16 Aligned repeated groups
+Give sibling descriptions comparable information depth and natural sentence structure. Align heading, body, price and action tracks using intrinsic layout. Do not force identical line counts at every width, add arbitrary line breaks, clamp/clip content or shrink isolated text. Centre odd remainder items where appropriate.
+W17 Spacing and footer join
+Use a coherent spacing scale based on 8, 12, 16, 24, 32, 48 and 64 pixels. Inspect every section boundary and footer transition. Correct empty columns, narrow wrappers, stacked margins, failed media, min-height errors and animation pin spacers at source. Keep useful compact empty states and approximately 24-32 pixels of intentional breathing room at the final content/footer join.
+W18 Responsive reachability
+Use intrinsic Grid/Flexbox and natural mobile stacking. Prevent text/control clipping, overlaps and horizontal page overflow. Wide tables may scroll within an accessible wrapper. Keep content and controls reachable at narrow and short-height viewports, native 200 percent zoom and with long text. Do not hide content to make a layout pass.
+Premium animation and video requirements
+W19 Section motion
+Premium animation is mandatory. Implement a varied library of at least nine appropriate section entrance patterns, then assign them deliberately so adjacent sections do not repeat one effect. Support entrances while scrolling in either direction. Do not add meaningless motion just to inflate the pattern count; record the pattern and intended purpose for each section.
+W20 Page opening and interaction feedback
+Animate destination openings from public, mobile, footer, entry and dashboard navigation, including browser back/forward restoration. Preserve links, modified clicks, focus and navigation responsiveness; do not impose artificial exit delays. Add polished button, card, menu, selection and state-change feedback with accessible touch equivalents.
+W21 Motion implementation and failure safety
+Use locally packaged GSAP and ScrollTrigger with licence records for advanced motion and CSS for simple feedback. Record the tested library version; do not add competing animation stacks or runtime frameworks. Prefer transform/opacity, clean up/recalculate after resize, direction changes and dynamic updates, and avoid scroll hijacking, empty pin regions, forced horizontal navigation and hidden essential content.
+W22 Reduced motion and performance
+Respect reduced-motion settings by cancelling nonessential entrances and video autoplay. Content and controls must remain available with animation scripts blocked or failing. Avoid motion-induced horizontal overflow, layout shifts and excessive work when offscreen or when the tab is hidden.
+W23 HOME 2 video
+Include a relevant licensed local urban cycling video and poster in HOME 2. Keep copy and CTA readable independently of playback. Provide muted inline playback, an accessible play/pause action, no autoplay audio, a still fallback for blocked/failed media and sensible loading. Test load, play, pause, autoplay failure, offscreen/hidden-tab handling and reduced motion.
+Entry dashboard and accessible state
+W24 Separate name only entry
+Use separate Login and Sign Up files with no public navbar/footer. Follow the final frontend name-only entry model: accept a preferred name of 1-50 nonblank characters, validate it and greet the user with that exact name safely rendered as text. Do not collect email, passwords or identity documents. This replaces password, Remember Me, visibility and password-recovery controls from the earlier attachment.
+W25 Entry layout and provider simulations
+Keep the theme logo inside an entry card and equal theme/RTL utilities outside it at the top right in both directions. Use labelled vertical controls with actions matching field width and usable short-height layouts. Apple and Google options must open an accessible preferred-name dialog that states the provider account is not connected. Use only permitted provider marks. Both entry pages still require ten concise meaningful sections without filler.
+W26 Dedicated dashboard shell
+Use a dedicated sidebar and utility area without the public shell. Fully implement Overview, Browse, Book, Active, Extend, History, Documents, Profile, Notifications and Settings. Include welcome, relevant metrics, profile, notifications, settings and sign-out. Keep utilities separate from side destinations; all views must remain reachable on mobile and short screens.
+W27 Dialogs forms and local storage
+Implement every visible filter, sort, tab, accordion, modal, notification, profile setting and download. Validate inputs and give clear local outcomes. Dialogs/drawers need appropriate keyboard containment, Escape closing and focus return. Store only harmless local planner records/preferences; never credentials, payment or identity data.
+W28 Persistence sign out and reset
+Sign-out returns to entry while preserving plans. Full Settings reset clears preferred name and plans and must not reseed samples automatically. Document and test reload, direct URLs/query parameters, returning navigation, empty states and storage reset. Render all user-entered names/content safely as text.
+Bicycles tours prices and rental rules
+W29 Shared demonstration catalogue
+Provide City, Hybrid and Electric bicycle categories with individual complete detail views and at least two guided-tour detail views. Provide consistent photographs, features, suitability, availability, pickup mapping, daily/group rates and inclusions. Use neutral original product/hub labels; do not reproduce another project owner or business identity.
+W30 Demonstration finance configuration
+Configure sample City, Hybrid and Electric daily rates of 18, 26 and 38 in a clearly stated consistent currency, with a separate deposit of 75 per bicycle. Treat these as illustrative assessment data, not live tariffs. Rental days are full 24-hour blocks, rental length 1-14 days and extensions 1-7 days within 14 total. Extensions use the original daily rate without a second deposit.
+W31 Times pickup and availability
+Use one documented timezone consistently; use UTC for the provided demonstration configuration and label displayed times. Demonstration hub hours are 08:00-20:00 with pickup starts 08:00-19:59. Keep each bicycle linked to its assigned pickup/return hub. Validate interval overlaps and unavailable options. Mark maps/addresses as illustrative rather than real directions or operating claims.
+W32 Tours and included items
+Provide two illustrative private group tours: an easy 12-kilometre three-hour option priced 150 per group and a moderate 22-kilometre four-hour option priced 210 per group in the chosen currency. Support one to six riders, 15-minute early arrival, bicycles/helmets/guide/fitting/briefing included, food/drinks excluded and no bicycle deposit for tours. Bicycle rentals include helmet, lock, lights and fitting.
+W33 One calculation model
+Use shared functions/data for rates, dates, deposits, duration, interval validation, status, availability, extension and documents. Never maintain contradictory editorial calculations. Do not invent extra refunds, guarantees, insurance, testimonials, discounts or support promises. Any extra illustrative offer must be explicitly identified and use documented consistent configuration.
+W34 Booking extensions and pricing presentation
+Exercise valid, invalid, unavailable and successful demo bookings. Cancel only the appropriate upcoming interval. A failed extension must preserve the original record; a successful extension updates duration, deadline and total together. Pricing must distinguish inventory rates from plans. If a genuine three-plan group is shown, use Primary styling for Popular and Secondary for the others; do not call three bicycle models subscription tiers.
+Samples documents and trustworthy content
+W35 Five rental sample fixture
+Provide one active, two upcoming and two completed sample rentals, isolated from personal planner records. Seed once only if no personal ride/tour records or prior removal/reset choice prevent it. Add deliberate sample load/remove controls. Never overwrite personal plans or mix sample stock into personal availability.
+W36 Consistent sample clock and derived views
+Use one visible recorded example clock for sample status/countdowns; use current time for personal plans. Share validation and calculation functions across both calendars while keeping records isolated. Derive dashboard metrics, active/upcoming panels, history, notifications and documents from their corresponding records.
+W37 Honest downloadable documents
+Sample receipts must say Sample - no payment processed. Sample agreements must say Sample - not legally executed. Preserve those labels in dashboard details and generated files. Personal plans download estimates/itineraries without fabricated payments, signatures or confirmed reservations. Supply genuine printable HTML downloads and accurately explain browser Print to PDF; never rename HTML or JSON as PDF.
+W38 Professional demonstration language
+Use clear normal visitor-facing prose without repeating technical disclaimers in every paragraph. Place explicit notices at provider entry, sample records, booking confirmation and downloads where they affect understanding. Do not imply real account connections, payments, reservations or legally signed agreements.
+QA QC and complete delivery
+W39 Complete inventory and baseline
+Freeze the complete route/view/interaction inventory, record all meaningful sections and capture a recoverable baseline before significant shared corrections. Test every consumer of shared changes, not only pages appearing in a screenshot.
+W40 Required browser matrix
+Test every created route/view at 360, 768, 940, 1024, 1440 and 1536 CSS pixels, in Light/LTR, Light/RTL, Dark/LTR and Dark/RTL. Use Chromium, Firefox and WebKit and record actual versions. Also test 320 pixels, short height, native 200 percent zoom, keyboard, touch-equivalent operation and reduced motion. Do not equate engine emulation with physical devices or Apple Safari; record these separately.
+W41 Visual verification
+Inspect complete rendered pages and actual interactions. Check one H1, computed type weights, all images, text visible after motion, aligned headings/body/actions, equal sibling buttons, complete cards, centred odd remainders, image/text balance and every footer join. Automated assertions and contact sheets do not prove every uninspected text line or visual state is correct.
+W42 Functional regression
+Check all links, direct routes, filters, sort orders, forms, validation, modals, menu/sidebar access, utilities, sample/personal isolation, notifications, downloads, persistence/reset, booking cancellation and valid/conflicting extensions. Generate documents from different completed records and verify their individual references/amounts. Record console and failed-asset errors and motion/video failure cases.
+Evidence delivery and acceptance
+W43 Evidence and defect closure
+For each requirement record steps, expected result, actual result, status, environment and evidence. Use PASS/VERIFIED only for executed successful checks; use FAIL, BLOCKED, NOT RUN or justified N/A otherwise. For corrections record affected scope, cause, fix, changed files and retest. Do not copy another build's historical results into this assessment.
+W44 Originality licences and AI responsibility
+AI assistance is permitted only with personal review, understanding, correction and executed verification. Maintain asset/source/licence/attribution and AI-assistance registers. Use original or permitted code, copy, media, fonts and libraries for the intended use; do not assume generated output or an unverified template is copyright-free.
+W45 Build and handover integrity
+Deliver the complete editable source archive, accessible repository with exact branch/commit, hosted static review URL, README/usage guide, page/section inventory, completed checklist, evidence, known issues, design manifest and licence/AI registers. Build output must contain only runtime HTML/assets, excluding internal documents, QA folders, test profiles and archives. Verify a clean build and freshly extracted runtime package with hashes and route checks.
+W46 Management acceptance
+All mandatory requirements and required tests must be satisfied for technical clearance. A checklist, screenshot, code edit, script pass or functional result alone does not establish premium visual acceptance. Dev performs independent QC and Management communicates the result. Submit the complete package by 12 September 2026 at 18:00 IST; a scope/deadline change requires written Management instruction.

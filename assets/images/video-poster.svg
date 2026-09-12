@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900">
+  <defs>
+    <linearGradient id="sky" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1F3F8C"/>
+      <stop offset="50%" stop-color="#3A60BD"/>
+      <stop offset="100%" stop-color="#E8A93B"/>
+    </linearGradient>
+    <linearGradient id="road" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2B3040"/>
+      <stop offset="100%" stop-color="#10131A"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#sky)"/>
+  <path d="M 0 600 L 120 500 L 180 540 L 260 420 L 340 600 L 450 480 L 520 600 L 680 410 L 760 600 L 900 460 L 1020 600 L 1150 430 L 1280 600 L 1400 490 L 1600 600 L 1600 900 L 0 900 Z" fill="#162347" opacity="0.6"/>
+  <polygon points="0,750 1600,680 1600,900 0,900" fill="url(#road)"/>
+  <g transform="translate(700, 580) scale(1.4)">
+    <circle cx="40" cy="80" r="35" fill="none" stroke="#F7F5F0" stroke-width="4"/>
+    <circle cx="140" cy="80" r="35" fill="none" stroke="#F7F5F0" stroke-width="4"/>
+    <path d="M 40 80 L 80 80 L 115 45 L 65 45 Z" fill="none" stroke="#F7F5F0" stroke-width="4" stroke-linejoin="round"/>
+    <path d="M81 80 L 100 45 L 140 80" fill="none" stroke="#F7F5F0" stroke-width="4" stroke-linejoin="round"/>
+    <path d="M 100 45 L 90 20 L 70 20" fill="none" stroke="#F7F5F0" stroke-width="4" stroke-linecap="round"/>
+    <path d="M 115 45 L 120 25 L 135 25" fill="none" stroke="#F7F5F0" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="75" cy="-5" r="10" fill="#E8A93B"/>
+    <path d="M 75 5 L 70 30 L 90 25 L 120 25" fill="none" stroke="#E8A93B" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M 70 30 L 50 50 L 40 80" fill="none" stroke="#E8A93B" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <circle cx="800" cy="450" r="50" fill="rgba(31,63,140,0.85)" stroke="#E8A93B" stroke-width="4"/>
+  <polygon points="790,425 825,450 790,475" fill="#FFFFFF"/>
+  <text x="800" y="250" font-family="Fraunces, serif" font-size="48" font-weight="600" fill="#FFFFFF" text-anchor="middle">A Day of Urban Cycling</text>
+  <text x="800" y="300" font-family="Inter, sans-serif" font-size="22" fill="#F0EDE6" text-anchor="middle">Latitude City Demonstration Video</text>
+</svg>

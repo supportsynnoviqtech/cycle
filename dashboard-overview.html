@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Overview &ndash; Dashboard &mdash; PerfectBike</title>
+<meta name="description" content="Overview &ndash; PerfectBike Dashboard.">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/layout.css">
+<script src="js/storage.js"></script>
+<script src="js/theme.js"></script>
+</head>
+<body class="dash-body">
+<div class="dash-shell">
+  <div id="dash-sidebar-mount"></div>
+  <main class="dash-main" id="main">
+
+    <header class="dash-header">
+      <div>
+        <button type="button" class="icon-control dash-mobile-toggle js-dash-mobile-open" aria-label="Open sidebar menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+        <div>
+          <h1 style="font-size:1.5rem;margin:0;">Overview</h1>
+          <p class="text-muted" style="margin-top:2px;font-size:0.85rem;">Welcome back, <span id="user-greeting-name">Rider</span>!</p>
+        </div>
+      </div>
+      <div class="actions">
+        <a class="btn btn-primary btn-sm" href="dashboard-book.html">Book New Ride</a>
+      </div>
+    </header>
+
+    <div class="dash-content">
+
+      <section class="section-tight" aria-labelledby="ov-metrics-h">
+        <h2 class="sr-only" id="ov-metrics-h">Metrics</h2>
+        <div class="dash-metrics-grid">
+          <div class="metric-card">
+            <div class="metric-card__title">Active Rental</div>
+            <div class="metric-card__value" id="metric-active-count">1</div>
+            <div class="metric-card__sub">Currently on road</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-card__title">Upcoming Rides</div>
+            <div class="metric-card__value" id="metric-upcoming-count">2</div>
+            <div class="metric-card__sub">Scheduled pickups</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-card__title">Completed Rides</div>
+            <div class="metric-card__value" id="metric-completed-count">2</div>
+            <div class="metric-card__sub">Past rentals</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-card__title">Next Pickup</div>
+            <div class="metric-card__value" style="font-size:1.125rem;" id="metric-next-pickup">Central Square</div>
+            <div class="metric-card__sub">08:00 UTC</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-tight" aria-labelledby="ov-active-h">
+        <div class="section-intro" style="text-align:start;margin-bottom:16px;">
+          <p class="eyebrow">Current Ride</p>
+          <h2 id="ov-active-h">Active rental status</h2>
+        </div>
+        <div class="card" id="ov-active-card">
+          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;">
+            <div>
+              <span class="badge badge-success">Active Now</span>
+              <h3 style="margin-top:8px;">The Crosscut (Hybrid)</h3>
+              <p class="text-muted">Riverside Dock Hub &ndash; 2-Day Rental &ndash; $26.00 / day</p>
+            </div>
+            <div>
+              <a class="btn btn-secondary btn-sm" href="dashboard-active.html">View Active Ride</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-tight" aria-labelledby="ov-upcoming-h">
+        <div class="section-intro" style="text-align:start;margin-bottom:16px;">
+          <p class="eyebrow">Upcoming Bookings</p>
+          <h2 id="ov-upcoming-h">Scheduled pickups</h2>
+        </div>
+        <div class="card-grid">
+          <div class="card">
+            <span class="badge badge-warning">Upcoming</span>
+            <h3>The Wayfarer (City)</h3>
+            <p class="text-muted">Central Square Hub &ndash; Starts in 3 days</p>
+            <div class="card-footer"><a class="btn btn-ghost btn-sm" href="dashboard-history.html">Manage</a></div>
+          </div>
+          <div class="card">
+            <span class="badge badge-warning">Upcoming</span>
+            <h3>The Ascent (Electric)</h3>
+            <p class="text-muted">Harbor Terrace Hub &ndash; Starts in 6 days</p>
+            <div class="card-footer"><a class="btn btn-ghost btn-sm" href="dashboard-history.html">Manage</a></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-tight" aria-labelledby="ov-quick-h">
+        <div class="section-intro" style="text-align:start;margin-bottom:16px;">
+          <p class="eyebrow">Quick Actions</p>
+          <h2 id="ov-quick-h">Dashboard shortcuts</h2>
+        </div>
+        <div class="card-grid">
+          <div class="card">
+            <h3>Book a Bicycle</h3>
+            <p>Choose City, Hybrid, or Electric.</p>
+            <div class="card-footer"><a class="btn btn-primary btn-sm" href="dashboard-book.html">Book Now</a></div>
+          </div>
+          <div class="card">
+            <h3>Extend Rental</h3>
+            <p>Add 1&ndash;7 days to an active booking.</p>
+            <div class="card-footer"><a class="btn btn-secondary btn-sm" href="dashboard-extend.html">Extend</a></div>
+          </div>
+          <div class="card">
+            <h3>View Documents</h3>
+            <p>Receipts &amp; agreements.</p>
+            <div class="card-footer"><a class="btn btn-secondary btn-sm" href="dashboard-documents.html">Documents</a></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-tight" aria-labelledby="ov-notif-h">
+        <div class="section-intro" style="text-align:start;margin-bottom:16px;">
+          <p class="eyebrow">Recent Activity</p>
+          <h2 id="ov-notif-h">Notifications &amp; alerts</h2>
+        </div>
+        <div class="card">
+          <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:12px;">
+            <li style="display:flex;gap:12px;align-items:center;"><span class="badge badge-primary">System</span><span>Welcome to PerfectBike Dashboard Planner.</span></li>
+            <li style="display:flex;gap:12px;align-items:center;"><span class="badge badge-success">Booking</span><span>Sample fixture loaded (5 rentals).</span></li>
+          </ul>
+          <div class="card-footer"><a class="btn btn-ghost btn-sm" href="dashboard-notifications.html">View All Notifications</a></div>
+        </div>
+      </section>
+
+      <section class="section-tight" aria-labelledby="ov-prefs-h">
+        <div class="section-intro" style="text-align:start;margin-bottom:16px;">
+          <p class="eyebrow">Preferences</p>
+          <h2 id="ov-prefs-h">Rider settings summary</h2>
+        </div>
+        <div class="card">
+          <p><strong>Default Hub:</strong> Central Square Hub</p>
+          <p><strong>Helmet Size:</strong> Medium</p>
+          <p><strong>Theme:</strong> <span id="ov-theme-label">Standard System Preference</span></p>
+          <div class="card-footer"><a class="btn btn-ghost btn-sm" href="dashboard-profile.html">Edit Profile</a></div>
+        </div>
+      </section>
+
+      <section class="section-tight" aria-labelledby="ov-fixture-h">
+        <div class="section-intro" style="text-align:start;margin-bottom:16px;">
+          <p class="eyebrow">Sample Fixture</p>
+          <h2 id="ov-fixture-h">Sample data indicator</h2>
+        </div>
+        <div class="card" style="background:var(--color-warning-soft);border-color:var(--color-warning);">
+          <p><strong>Sample Fixture Active:</strong> 5 demonstration rentals derived from a fixed reference clock (2026-09-11 12:00 UTC).</p>
+        </div>
+      </section>
+
+      <section class="section-tight" aria-labelledby="ov-diag-h">
+        <div class="section-intro" style="text-align:start;margin-bottom:16px;">
+          <p class="eyebrow">System Baseline</p>
+          <h2 id="ov-diag-h">Calculation engine status</h2>
+        </div>
+        <div class="card">
+          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;">
+            <div>
+              <span class="badge badge-success">Engine Ready</span>
+              <p class="text-muted" style="margin-top:8px;">Standard daily rates ($18 / $26 / $38), a $75 refundable deposit, and tour prices ($150 / $210) are active across every booking and estimate on this dashboard.</p>
+            </div>
+            <div><a class="btn btn-ghost btn-sm" href="dashboard-settings.html">Inspect Diagnostics</a></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-tight" aria-labelledby="ov-footer-h">
+        <h2 class="sr-only" id="ov-footer-h">Footer note</h2>
+        <div class="card" style="text-align:center;">
+          <p class="text-muted">PerfectBike Frontend Assessment SYN-FE-DESIGN-001 &ndash; Static Review Package. All booking calculations, date checks, extensions, and documents run locally in your browser &ndash; no payment is ever processed.</p>
+        </div>
+      </section>
+
+    </div>
+  </main>
+</div>
+<script src="js/data.js"></script>
+<script src="js/calculations.js"></script>
+<script src="js/dashboard.js"></script>
+<script src="assets/gsap/gsap.min.js"></script>
+<script src="assets/gsap/ScrollTrigger.min.js"></script>
+<script src="js/motion.js"></script>
+<script>
+PerfectBikeDashboard.mountSidebar("overview");
+document.getElementById("ov-theme-label").textContent =
+  PerfectBikeTheme.getTheme() === "dark" ? "Dark theme" : "Light theme";
+</script>
+</body>
+</html>

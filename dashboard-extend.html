@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Extend Rental &ndash; Dashboard &mdash; PerfectBike</title>
+<meta name="description" content="Extend Rental &ndash; PerfectBike Dashboard.">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/layout.css">
+<script src="js/storage.js"></script>
+<script src="js/theme.js"></script>
+</head>
+<body class="dash-body">
+<div class="dash-shell">
+  <div id="dash-sidebar-mount"></div>
+  <main class="dash-main" id="main">
+
+    <header class="dash-header">
+      <div>
+        <button type="button" class="icon-control dash-mobile-toggle js-dash-mobile-open" aria-label="Open sidebar menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+        <div>
+          <h1 style="font-size:1.5rem;margin:0;">Extend Rental</h1>
+          <p class="text-muted" style="margin-top:2px;font-size:0.85rem;">Add 1 to 7 days to your active or upcoming rental.</p>
+        </div>
+      </div>
+    </header>
+
+    <div class="dash-content">
+
+      <section class="section-tight" aria-labelledby="ext-form-h">
+        <h2 class="sr-only" id="ext-form-h">Extension form</h2>
+        <div class="card" style="max-width:720px;">
+          <form id="js-extend-form" novalidate>
+            <div class="field">
+              <label for="ext-rental-select">Select Rental Record to Extend</label>
+              <select class="input" id="ext-rental-select">
+                <option value="SMP-1001" selected>SMP-1001 &ndash; The Crosscut (Hybrid) &ndash; Active</option>
+                <option value="SMP-1002">SMP-1002 &ndash; The Wayfarer (City) &ndash; Upcoming</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="ext-days-input">Additional Days (1&ndash;7)</label>
+              <input class="input" id="ext-days-input" type="number" min="1" max="7" value="2">
+            </div>
+            <div class="card" style="background:var(--color-surface-sunken);margin-block:16px;">
+              <h4>Extension Calculation Summary</h4>
+              <p>Original Daily Rate: <strong id="ext-rate">$26.00 / day</strong></p>
+              <p>Current Duration: <strong id="ext-current-days">2 days</strong></p>
+              <p>Additional Days: <strong id="ext-additional-days">2 days</strong></p>
+              <p>New Total Duration: <strong id="ext-new-days">4 days</strong></p>
+              <p>Additional Deposit: <strong id="ext-deposit">$0.00 (no second deposit)</strong></p>
+              <p style="font-size:1.25rem;color:var(--color-primary);margin-top:8px;">Updated Rental Total: <strong id="ext-total">$104.00</strong></p>
+            </div>
+            <p class="error" id="ext-error-msg" role="alert"></p>
+            <p class="text-muted" id="ext-success-msg" role="status" style="display:none;"></p>
+            <button class="btn btn-primary btn-block" type="submit">Submit Extension Request</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="section-tight" aria-labelledby="ext-rule1">
+        <div class="section-intro" style="text-align:start;margin-bottom:16px;">
+          <p class="eyebrow">Extension Rule</p>
+          <h2 id="ext-rule1">1 to 7 day length limit</h2>
+        </div>
+        <div class="card"><p>Extensions must be between 1 and 7 additional days.</p></div>
+      </section>
+
+      <section class="section-tight" aria-labelledby="ext-rule2">
+        <div class="section-intro" style="text-align:start;margin-bottom:16px;">
+          <p class="eyebrow">Total Duration Cap</p>
+          <h2 id="ext-rule2">14-day maximum total duration</h2>
+        </div>
+        <div class="card"><p>Total rental duration, including any extension, cannot exceed 14 full 24-hour days.</p></div>
+      </section>
+
+      <section class="section-tight" aria-labelledby="ext-rule3">
+        <div class="section-intro" style="text-align:start;margin-bottom:16px;">
+          <p class="eyebrow">No Second Deposit</p>
+          <h2 id="ext-rule3">Original daily tariff rate</h2>
+        </div>
+        <div class="card"><p>Extensions bill at your original daily tariff rate with no second security deposit.</p></div>
+      </section>
+
+      <section class="section-tight" aria-labelledby="ext-rule4">
+        <div class="section-intro" style="text-align:start;margin-bottom:16px;">
+          <p class="eyebrow">Failure Safety</p>
+          <h2 id="ext-rule4">Failed extension preservation</h2>
+        </div>
+        <div class="card"><p>A failed extension request preserves your original rental record unchanged.</p></div>
+      </section>
+
+      <section class="section-tight" aria-labelledby="ext-rule5">
+        <div class="section-intro" style="text-align:start;margin-bottom:16px;">
+          <p class="eyebrow">Successful Extension</p>
+          <h2 id="ext-rule5">Atomic updates</h2>
+        </div>
+        <div class="card"><p>A successful extension updates duration, end deadline, and total amount together.</p></div>
+      </section>
+
+      <section class="section-tight" aria-labelledby="ext-engine">
+        <div class="section-intro" style="text-align:start;margin-bottom:16px;">
+          <p class="eyebrow">Calculation Engine</p>
+          <h2 id="ext-engine">Shared extension validator</h2>
+        </div>
+        <div class="card"><p>Powered by <code>PerfectBikeCalc.validateExtension</code> and <code>PerfectBikeCalc.applyExtension</code>.</p></div>
+      </section>
+
+      <section class="section-tight" aria-labelledby="extend-terms-h">
+        <div class="section-intro" style="text-align:start;margin-bottom:16px;">
+          <p class="eyebrow">Extension Terms</p>
+          <h2 id="extend-terms-h">Second deposit &amp; tariff terms</h2>
+        </div>
+        <div class="card"><p class="text-muted">Extensions add 1 to 7 days at the original daily rate. No second security deposit is required for extending an active rental.</p></div>
+      </section>
+
+      <section class="section-tight" aria-labelledby="ext-demo-notice">
+        <div class="section-intro" style="text-align:start;margin-bottom:16px;">
+          <p class="eyebrow">Notice</p>
+          <h2 id="ext-demo-notice">Demonstration mode</h2>
+        </div>
+        <div class="card"><p>Extensions are simulated locally inside your browser &ndash; no payment is processed.</p></div>
+      </section>
+
+      <section class="section-tight" aria-labelledby="ext-foot-card">
+        <h2 class="sr-only" id="ext-foot-card">Footer note</h2>
+        <div class="card" style="text-align:center;"><p class="text-muted">PerfectBike Dashboard &ndash; Extension Manager</p></div>
+      </section>
+
+    </div>
+  </main>
+</div>
+<script src="js/data.js"></script>
+<script src="js/calculations.js"></script>
+<script src="js/dashboard.js"></script>
+<script src="assets/gsap/gsap.min.js"></script>
+<script src="assets/gsap/ScrollTrigger.min.js"></script>
+<script src="js/motion.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  PerfectBikeDashboard.mountSidebar("extend");
+
+  const recordSelect = document.getElementById("ext-rental-select");
+  const daysInput = document.getElementById("ext-days-input");
+  const rateEl = document.getElementById("ext-rate");
+  const currentDaysEl = document.getElementById("ext-current-days");
+  const additionalDaysEl = document.getElementById("ext-additional-days");
+  const newDaysEl = document.getElementById("ext-new-days");
+  const depositEl = document.getElementById("ext-deposit");
+  const totalEl = document.getElementById("ext-total");
+  const errorEl = document.getElementById("ext-error-msg");
+  const successEl = document.getElementById("ext-success-msg");
+
+  function getRecord() {
+    return PerfectBikeData.SAMPLE_RENTALS.find((r) => r.id === recordSelect.value);
+  }
+
+  function updateCalc() {
+    errorEl.textContent = "";
+    successEl.style.display = "none";
+    const record = getRecord();
+    if (!record) return;
+
+    const additionalDays = Math.max(1, Math.min(7, parseInt(daysInput.value, 10) || 1));
+    const rate = PerfectBikeCalc.getDailyRate(record.bicycleId);
+
+    rateEl.textContent = `${PerfectBikeCalc.formatMoney(rate)} / day`;
+    currentDaysEl.textContent = `${record.days} day${record.days === 1 ? "" : "s"}`;
+    additionalDaysEl.textContent = `${additionalDays} day${additionalDays === 1 ? "" : "s"}`;
+    depositEl.textContent = `${PerfectBikeCalc.formatMoney(0)} (no second deposit)`;
+
+    const check = PerfectBikeCalc.validateExtension(record, additionalDays);
+    if (!check.valid) {
+      newDaysEl.textContent = "\u2014";
+      totalEl.textContent = "\u2014";
+      errorEl.textContent = check.reason;
+      return;
+    }
+
+    newDaysEl.textContent = `${check.totalDays} days`;
+    totalEl.textContent = PerfectBikeCalc.formatMoney(PerfectBikeCalc.calculateExtensionTotal(record.bicycleId, check.totalDays));
+  }
+
+  recordSelect.addEventListener("change", updateCalc);
+  daysInput.addEventListener("input", updateCalc);
+  updateCalc();
+
+  document.getElementById("js-extend-form").addEventListener("submit", (e) => {
+    e.preventDefault();
+    errorEl.textContent = "";
+    successEl.style.display = "none";
+
+    const record = getRecord();
+    const additionalDays = Math.max(1, Math.min(7, parseInt(daysInput.value, 10) || 1));
+    const result = PerfectBikeCalc.applyExtension(record, additionalDays);
+
+    if (!result.success) {
+      errorEl.textContent = result.reason;
+      return;
+    }
+
+    successEl.textContent = `${record.id} extended by ${additionalDays} day(s) \u2013 new total duration ${result.record.days} days, updated amount ${PerfectBikeCalc.formatMoney(result.record.total)}. This is a local demonstration update only.`;
+    successEl.style.display = "block";
+  });
+});
+</script>
+</body>
+</html>
