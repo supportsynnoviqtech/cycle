@@ -23,10 +23,9 @@ const PerfectBikeShell = (() => {
       <path d="M12 2v2.5M12 19.5V22M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2 12h2.5M19.5 12H22M4.2 19.8l1.8-1.8M18 6l1.8-1.8"/>
     </svg>`;
   }
-  function cogIcon() {
-    return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-      <circle cx="12" cy="12" r="3"/>
-      <path d="M19.4 13a7.9 7.9 0 0 0 0-2l2-1.6-2-3.4-2.4 1a8 8 0 0 0-1.7-1L15 3h-4l-.3 2.9a8 8 0 0 0-1.7 1l-2.4-1-2 3.4L6.6 11a7.9 7.9 0 0 0 0 2l-2 1.6 2 3.4 2.4-1a8 8 0 0 0 1.7 1L11 21h4l.3-2.9a8 8 0 0 0 1.7-1l2.4 1 2-3.4-2-1.6z"/>
+  function dirIcon() {
+    return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M8 7h11M8 17h11M13 3l-4 4 4 4M14 21l4-4-4-4"/>
     </svg>`;
   }
   function menuIcon() {
@@ -61,7 +60,7 @@ const PerfectBikeShell = (() => {
         </div>
         <div class="header-utils">
           <button type="button" class="icon-control js-theme-toggle" aria-pressed="false" aria-label="Switch theme" title="Toggle Theme">${sunIcon()}</button>
-          <button type="button" class="icon-control js-dir-toggle" aria-pressed="false" aria-label="Switch layout direction" title="Toggle LTR/RTL">${cogIcon()}</button>
+          <button type="button" class="icon-control js-dir-toggle" aria-pressed="false" aria-label="Switch layout direction" title="Toggle LTR/RTL">${dirIcon()}</button>
           <button type="button" class="icon-control nav-toggle js-drawer-open" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-drawer">${menuIcon()}</button>
         </div>
       </div>
